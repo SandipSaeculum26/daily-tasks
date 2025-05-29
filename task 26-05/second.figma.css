@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(180, 180, 13);
+}
+.container{
+  height: 100%;
+  width: 100%;
+  background-color: teal;
+  display: flex;
+}
+.row-1 {
+  height: 100%;
+  width: 30%;
+  background-color: rgb(14, 184, 54);
+}
+.cols{
+    display: flex;
+    height: 50%;
+}
+.col1{
+    height: 100%;
+    width: 50%;
+    background-color: #d5c8c8;
+
+}
+.col2{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(132, 16, 16);
+}
+.col3{
+    width: 100%;
+    height: 50%;
+    background-color: yellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.white-box{
+    background-color: #fff;
+    height: 50%;
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    gap: 20px;
+}
+.pinkbox{
+  height: 45%;
+  width: 46%;
+  background-color: pink;
+}
+
+
+
+.row-2 {
+  height: 100%;
+  width: 20%;
+  background-color: rgb(15, 81, 187);
+}
+
+.equal1{
+    width: 100%;
+    height: 33%;
+    background-color: rgb(111, 107, 107);
+}
+.equal2{
+    width: 100%;
+    height: 33%;
+    background-color: rgb(121, 75, 55);
+}
+.white-space{
+     width: 100%;
+     height: 50%;
+     background-color: rgb(191, 183, 183);
+}
+.equal3{
+    width: 100%;
+    height: 34%;
+    background-color: rgb(7, 7, 7);
+}
+
+
+
+.row-3 {
+  height: 100%;
+  width: 25%;
+  background-color: rgb(107, 125, 97);
+}
+
+.col-3a{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(185, 78, 24);
+}
+.col-3b{
+    width: 100%;
+    height: 39.5%;
+    background-color: rgb(203, 121, 121);
+    display: flex;
+}
+.col-3c{
+    width: 100%;
+    height: 30.5%;
+    background-color: rgb(127, 45, 45);
+    display: flex;
+}
+.col-3d{
+    width: 100%;
+    height: 20%;
+    background-color: rgb(134, 77, 49);
+}
+.col-3b-1{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(224, 88, 88);
+}
+.col-3b-2{
+    height: 100%;
+    width: 60%;
+    background-color: rgb(227, 222, 222);
+}
+.col-3b-3{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(224, 88, 88);
+
+}
+
+.top{
+    height: 30%;
+    width: 100%;
+    background-color: rgb(224, 88, 88); 
+}
+
+.col-3c-1{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(182, 69, 69);
+
+}
+.col-3c-2{
+    height: 100%;
+    width: 60%;
+    background-color: rgb(182, 69, 69); 
+}
+.col-3c-3{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(182, 69, 69);
+}
+
+.dot{
+    height: 70%;
+    width: 100%;
+    background-color: rgb(227, 222, 222);
+}
+
+
+
+
+
+.row-4 {
+  height: 100%;
+  width: 25%;
+  background-color: brown;
+  
+  
+  
+}
+.col-4a{
+    width: 100%;
+    height: 45%;
+    background-color: yellow;
+    display: flex;
+    
+}
+.col-4a-1{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(150, 39, 39);
+}
+.col-4a-2{
+    height: 100%;
+    width: 60%;
+    background-color: rgb(186, 168, 171);
+}
+.col-4a-3{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(150, 39, 39);
+}
+
+.col-4b{
+    width: 100%;
+    height: 35%;
+    background-color: yellow;
+    display: flex;
+}
+
+.col-4b-1{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(92, 21, 21);
+
+}
+.col-4b-2{
+    height: 100%;
+    width: 60%;
+    background-color: rgb(186, 168, 171);
+}
+.col-4b-3{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(92, 21, 21);
+}
+
+.col-4c{
+    width: 100%;
+    height: 20%;
+    background-color: yellow;
+    display: flex;
+}
+
+.col-4c-1{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(169, 11, 11);
+}
+
+.col-4c-2{
+    height: 100%;
+    width: 60%;
+    background-color: rgb(186, 180, 180);
+}
+
+.col-4c-3{
+    height: 100%;
+    width: 20%;
+    background-color: rgb(169, 11, 11);
+}

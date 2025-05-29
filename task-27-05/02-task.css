@@ -1,0 +1,257 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: #7c7575;
+    display: flex;
+    padding: 1%;
+    gap: 20px;
+}
+
+.box-1{
+    height: 98%;
+    width: 20%;
+    background-color: #fff;
+    padding:20px;
+    border-radius: 15px;
+}
+.about{
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 20px 0px 20px; 
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    margin-top: 10px;
+    border-radius:35px;
+    border: 4px solid rgb(211, 206, 206);
+}
+.profile-details{
+    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile-details h4{
+    margin-top: 10px;
+    background-color: rgb(176, 90, 53);
+    padding: 2px 20px;
+    border-radius: 5px;
+    color: rgb(205, 199, 199);
+}
+.profile-details p{
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: left;
+    align-items: center;
+    color: rgb(6, 133, 179);
+}
+
+/* ---------------------------------- personal info ---------------------------------- */
+
+.personal{
+    padding:10px 20px 0px 20px;
+}
+
+.personal p{
+    color: rgb(6, 133, 179);
+    font-weight: bold;
+}
+
+.professional p{
+    color: rgb(6, 133, 179);
+    font-weight: bold;
+}
+
+.info{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(2,1fr);
+}
+.info-1{
+  margin-top: 20px;
+  display: grid;
+  grid-template-rows: repeat(2,1fr);
+  grid-template-columns: repeat(2,1fr);
+}
+.heading
+{
+    margin-bottom: 10px;
+}
+h3{
+    display: inline;
+    font-size: 24px;   
+}
+p{
+    display: inline;
+}
+i{
+    padding:0px 20px 15px 0px;
+    font-size: 20px;
+    color: rgb(176, 90, 53);;
+}
+
+.professional{
+      padding:10px 20px 0px 20px;
+}
+
+.box-1-last p{
+   padding: 3px 20px;
+   border-radius: 15px;
+    background-color:#c7c4c4 ;
+    color: rgb(6, 133, 179);
+}
+.box-1-last{
+    margin: 7px;
+}
+
+   /* -----------------------------------box-2 start--------------------------------- */
+
+.box-2{
+    height: 100%;
+    width: 50%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.box-2a{
+    height: 40%;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 20px;
+}
+.range-css input{
+    width: 100%;
+    height: 7px;
+}
+
+.topic{
+    display: flex;
+    justify-content: space-between;
+}
+
+.range-css p{
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(6, 133, 179);
+}
+
+#para{
+    font-weight: 500;
+    color: rgb(6, 133, 179);
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.box-2b{
+    height: 55.5%;
+   
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 20px;
+}
+
+h4{
+    display: inline;
+    font-size: 20px;  
+}
+
+ 
+.box-3{
+    height: 100%;
+    width: 25%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.box-3a{
+  height:35.5%;
+  width: 100%;
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 20px;
+}
+.list{
+    padding-left: 20px;
+}
+.list ul li{
+    font-size: 18px;
+    color: rgb(212, 39, 39);
+}
+.list p{
+    font-size: 17px;
+    font-weight: 500;
+    color: rgb(6, 133, 179);
+}
+.box-3b{
+    height: 40.5%;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 20px;
+  }
+
+  .Scenario p{
+     font-size: 17px;
+     font-weight: 500;
+     color: rgb(6, 133, 179);
+     
+  }
+  .Psychographics-p{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(6, 133, 179);
+  }
+
+  .box-3c{
+    height: 17%;
+    width: 100%;
+    border-radius: 15px;
+    background-color: #fff;
+    padding: 20px;
+  } 
+
+  .icons{
+    gap: 20px;
+  }
+
+  .prog{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  progress{
+    width: 100%;
+  }
+
+  .icons i{
+    font-size: 36px;
+    padding-left: 16px;
+  }
+
+ 
