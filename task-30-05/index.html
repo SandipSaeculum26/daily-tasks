@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task-04</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <diV class="container">
+        <!-- -----------------------------------------------------slide bar----------------------------------------------------- -->
+      <div class="slide-bar">
+        <div class="header">
+          <div class="logo">
+            <img src="logoo.png" alt="Logo" width="50" height="50" />
+          </div>
+          <div class="user-details">
+            <div class="user-name"><h3>CONSTRUCTION</h3></div>
+            <div class="user-role"><p>SERVICE</p></div>
+          </div>
+        </div>
+
+        <div class="search-1">
+          <input type="search" placeholder="🔍Search..." />
+        </div>
+        <div class="menu">
+          <div>
+            <p>Main Menu</p>
+          </div>
+          <div class="menu-items">
+            <ul>
+              <li>
+                <i class="fa-solid fa-house"></i><a href="#">Dashboard</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-clock"></i><a href="#">Time Tracking</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-list-check"></i><a href="#">Task List</a>
+              </li>
+              <li>
+                <i class="fa-brands fa-squarespace"></i
+                ><a href="#">Lead Pipeline</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-sign-hanging"></i
+                ><a href="#">Estimates</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-file-invoice"></i><a href="#">Invoices</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-diagram-project"></i
+                ><a href="#">Projects</a>
+              </li>
+              <li>
+                <i class="fa-solid fa-calendar-days"></i
+                ><a href="#">Schedule</a> <button>New</button>
+              </li>
+              <li>
+                <i class="fa-solid fa-image"></i><a href="#">Photo & Files</a>
+              </li>
+              <li><i class="fa-solid fa-users"></i><a href="#">Customer</a></li>
+              <li><i class="fa-regular fa-map"></i><a href="#">Map</a></li>
+              <li>
+                <i class="fa-solid fa-arrow-up-right-dots"></i
+                ><a href="#">Report</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <!-- -----------------------------------------------------navbar----------------------------------------------------- -->
+
+        <div class="navbar">
+          <div class="head">
+            <div class="header"><i class="fa-solid fa-bars"></i><h2>Customer Details</h2></div>
+          </div>
+          <div class="content">
+            <div class="calender">
+              <i class="fa-solid fa-calendar-days"></i>
+              <input type="date" value="2023-10-01" />
+            </div>
+            <div class="statment">
+                <i class="fa-solid fa-newspaper"></i>
+              <a href="#">VIEW STATEMENT</a>
+            </div>
+            <div class="customer-details">
+              <i class="fa-solid fa-pen-to-square"></i>
+              <a href="#">EDIT CUSTOMERS DETAILS</a>
+            </div>
+            <div class="logo">
+              <img src="./download.jpg" alt="Logo" width="50" height="50" />
+            </div>
+          </div>
+        </div>
+
+        <!-- -----------------------------------------------------navbar end------------------------------------------------------->
+
+        <!-- ----------------------------------------------------------profile------------------------------------------------------ -->
+
+        <div class="profile">
+          <div class="profile-picture">
+            <img
+              src="./download.jpg"
+              alt="Profile Picture"
+              width="100px"
+              height="100px"
+            />
+          </div>
+
+          <div class="profile-info">
+            <div class="name">
+                <h2>Jubaer Riyad</h2>
+                <button id="new-customer">New Customer</button>
+            </div>
+
+            <div class="title">
+                <div>
+                    <div class="gray"><p>Email address:</p></div>
+                    <div class="dark"><p>Jubaer@musemind.com</p></div>
+                </div>
+                <div>
+                    <div class="gray"><p>Phone Number:</p></div>
+                    <div class="dark"><p>+1 (234) 567-8901</p></div>
+                </div>
+                <div>
+                    <div class="gray"><p>House Location:</p></div>
+                    <div class="dark"><p>123 Main St, Anytown, USA</p></div>
+                </div>
+            </div>
+          </div>
+
+          <div class="representation">
+              <!-- <div class="mini-profile-container"> -->
+                <div class="mini-header"><p>Representation</p></div>
+                <div class="mini-profile">
+                    <img src="download.jpg" alt="" width="50" height="50" />
+                    <div class="mini-profile-info">
+                        <p class="dark">Jubaer Riyad</p>
+                        <p class="gray">Project Manager</p>
+                    </div>
+                </div>
+            <!-- </div> -->
+          </div>
+        </div>
+
+        <!-- ----------------------------------------------------------profile end------------------------------------------------------ -->
+         <div class="four-boxes">
+            <div class="box-1">
+             <div class="top-box">
+                <div class="box-header">
+                    <!-- <img src="download.jpg" alt="" width="20" height="20" /> -->
+                    <i class="fa-solid fa-dollar-sign"></i>
+                     <p>Total estimate</p>
+                   </div>
+                   <div class="box-content">
+                   <div>
+                     <div class="box-content-inner"><p>22.42k</p></div>
+                     <div>
+                             <div class="box-content-status"><i class="fa-solid fa-circle"></i><p>ACCEPTED</p></div>
+                     </div>
+                   </div>
+                     <div class="pending">
+                         <div class="box-content-inner"><p>15.52k</p></div>
+                             <div class="box-content-status"><i class="fa-solid fa-circle"></i><p>PENDING</p></div>
+                     </div>
+                 </div>
+             </div>
+             <div class="bottom-box">
+               <div class="bottom-content">
+                <div class="growth"><i class="fa-solid fa-arrow-trend-up"></i><p>2.75%</p></div>
+                <div class="month"><p>Last month</p></div>
+               </div>
+               <div class="month"><p>View more</p></div>
+             </div>
+            </div>
+
+            <div class="box-1">
+                <div class="top-box">
+                   <div class="box-header-2">
+                       <!-- <img src="download.jpg" alt="" width="20" height="20" /> -->
+                       <i class="fa-solid fa-boxes-packing"></i>
+                        <p>Changes Order</p>
+                      </div>
+                      <div class="box-content">
+                      <div>
+                        <div class="box-content-inner"><p>22.42k</p></div>
+                        <div>
+                                <div class="box-content-status"><i class="fa-solid fa-circle"></i><p>ACCEPTED</p></div>
+                        </div>
+                      </div>
+                        <div class="pending">
+                            <div class="box-content-inner"><p>15.52k</p></div>
+                                <div class="box-content-status"><i class="fa-solid fa-circle"></i><p>PENDING</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-box">
+                  <div class="bottom-content">
+                   <div class="down"><i class="fa-solid fa-arrow-trend-down"></i><p>2.75%</p></div>
+                   <div class="month"><p>Last month</p></div>
+                  </div>
+                  <div class="month"><p>View more</p></div>
+                </div>
+               </div>
+
+               <div class="box-1">
+                <div class="top-box">
+                   <div class="box-header-3">
+                       <!-- <img src="download.jpg" alt="" width="20" height="20" /> -->
+                       <i class="fa-solid fa-file-invoice"></i>
+                        <p>Invoices</p>
+                      </div>
+                      <div class="box-content">
+                      <div>
+                        <div class="box-content-inner"><p>17.92k</p></div>
+                        <div>
+                                <div class="box-content-status"><i class="fa-solid fa-circle"></i><p>ACCEPTED</p></div>
+                        </div>
+                      </div>
+                        <div class="pending">
+                            <div class="box-content-inner"><p>12.34k</p></div>
+                                <div class="box-content-status"><i class="fa-solid fa-circle"></i><p>PENDING</p></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-box">
+                  <div class="bottom-content">
+                   <div class="growth"><i class="fa-solid fa-arrow-trend-up"></i><p>2.75%</p></div>
+                   <div class="month"><p>Last month</p></div>
+                  </div>
+                  <div class="month"><p>View more</p></div>
+                </div>
+               </div>
+
+               <div class="box-4">
+                  <div class="fourth-box">
+                    <div>
+                        <div class="fourth-header"><p>overdue</p></div>
+                        <div class="fourth-content"><p>17.92k</p></div>
+                      </div>
+                      <div>
+                        <div><button class="fourth-button">View Details</button></div>
+                      </div>
+                  </div>
+               </div>
+         </div>
+
+
+         <!-- --------------------------------------------------------------last-box------------------------------------------------------ -->
+          <div class="last-box">
+          
+            <div class="final-box">
+
+                <div class="cover">
+                  <div class="table-head">
+                    <div class="imp"><p>Documentation(120)</p></div>
+                    <div class="normal"><p>Projects(121)</p></div>
+                    <div class="normal"><p>Photos</p></div>
+                    <div class="normal"><p>Files(32)</p></div>
+                    <div class="normal"><p>Projects(12)</p></div>
+                  </div>
+                  <div class="table-search-bar">
+                        <div class="search-bar">
+                        <div class="search-icon"> <input type="search" placeholder="🔍search here....">
+                          <div class="short-by">
+                            <button><i class="fa-solid fa-arrow-down-short-wide"></i>short-by</button>
+                        </div>
+                        </div>
+                        
+                        <div class="drop-menu">
+                          <span> Create Document <i class="fa-solid fa-caret-down"></i> </span>
+                        </div>
+                        </div>
+                  </div>
+                
+                  <div class="table-list">
+                      <table>
+                        <tr>
+                          <th>Documents</th>
+                          <th>Associated projects</th>
+                          <th>Value</th>
+                          <th>Balance</th>
+                          <th>Status</th>
+                          <th>Sent Date</th>
+                          <th>Due Date</th>
+                          <th>Actions</th>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="table-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="table-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="table-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="table-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="table-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="table-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="table-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="table-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="table-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="table-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="mini-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="mini-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="mini-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+                        
+                        
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="mini-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="mini-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+
+
+                        <tr>
+                          <td><input type="checkbox">2501130</td>
+                          <td> <div class="table-profile">
+                            <img src="download.jpg" alt=""  />
+                            <div class="mini-profile-info">
+                                <p class="dark">Jubaer Riyad</p>
+                                <p class="gray">Project Manager</p>
+                            </div>
+                          </div></td>
+                          <td>$2,084</td>
+                          <td>$8,264</td>
+                          <td class="status"><span>Accepted</span></td>
+                          <td>10/12/2022</td>
+                          <td>10/12/2022</td>
+                          <td class="edit"><button class="action-button"><i class="fa-solid fa-pencil"></i>Edit</button></td>
+                        </tr>
+                      </table>
+                  </div>
+
+
+
+                </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
