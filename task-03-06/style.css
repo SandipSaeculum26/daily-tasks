@@ -170,6 +170,16 @@ button:hover{
 
 
 /* ------------------------------------------second frame------------------------ */
+.gallary{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+    padding: 20px;
+}
+.gallary img{
+    width: 100%;
+    height: 100%;
+}
 
 .two-sections{
     height: 100vh;
@@ -188,10 +198,12 @@ button:hover{
     width: 50%;
     height: 50vh;
     /* background-color: #f0f0f0; */
-    padding: 0px 20px 0px 100px;
+    padding: 0px 20px 0px 50px;
     overflow: hidden;
 }
-
+.nav {
+    padding-left: 24px;
+}
 .studio-text{
     width: 100%;
     height: 50vh;
@@ -292,7 +304,7 @@ span{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+  
     height: 20vh;
  }
  .photo-header h1{
@@ -307,32 +319,37 @@ span{
  .images{
     height: 40vh;
     width: 99%;
-    display: flex;
+    /* display: flex;
     justify-content: center;
     align-items: center;
-    
+    flex: 3;
+     */
+     display: grid;
+     grid-template-columns:auto auto auto;
+     padding: 10px 10px 10px 10px;
  }
 .image{
-    width: 33%;
-    height: 100%;
-    /* background-color: #f0f0f0; */
+    /* width: 33%;
+    height: 100%;  */
     padding: 10px 10px 10px 10px;
     display: flex;
-    justify-content: space-between;
-    
-
+    flex-wrap: wrap;
 }
-.image img{
+/* .image img{
     width: 100%;
     height: 100%;
-}
+} */
 
--------------------------------------------------------------------f
+/* -------------------------------------------------------------------footer----------------------------------------------------- */
 
-.footer{
-    height: 100vh;
-    /* background-color: rgb(4, 174, 89) */
-}
+
+    .footer {
+        height: 100vh;
+        /* background-color: rgb(4, 174, 89); */
+        margin-top: 90px;
+    }
+
+  
 
 .contact-details{
     height: 100vh;
@@ -505,6 +522,14 @@ span{
         margin-right: 0px;
        
     }
+    .contact-header {
+
+        margin-top: 112px;
+    }
+    .we-did {
+        height: 66vh;
+        /* background-color: rgb(4, 174, 89); */
+    }
     
 }
 @media screen and (max-width: 768px) {
@@ -546,7 +571,7 @@ span{
 
 
 .studio-header h1 {
-    font-size: 20px;
+    font-size: 16px;
    
 }
 
@@ -594,27 +619,52 @@ button {
     font-size: 10px;
     
 }
+.gallary{
+    grid-template-columns: auto auto;
+}
 .row input {
     
     height: 36px;
     padding: 17px;
     
 }
-
-.subject {
-  
-    height: 35px;
-   
-    padding: 17px;
-   
+.left-section {
+    width: 50%;
+    height: 50vh;
+    /* background-color: #f0f0f0; */
+    padding: 0px 0px 0px 37px;
+    overflow: hidden;
 }
 
+.about-contact {
+    height: 75vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+}
+.about {
+    width: 80%;
+    height: 100%;
+    overflow: hidden;
+    padding-left: 10px;
+}
+.right-side {
+    height: 100%;
+    width: 80%;
+    /* background-color: #875454; */
+    padding: 0px;
+}
 .contact-form form textarea {
     
     height: 100px;
     
 }
-
+.contact-form {
+    width: 96%;
+    height: 100%;
+}
 .coming-header h1 {
     font-size: 33px;
     margin-bottom: 20px;
@@ -658,9 +708,93 @@ button {
     align-items: center;
     padding: 20px;
     height: 20vh;
-    margin-top: 100px;
+    margin-top: 10px;
 }
 .links ul {
     display: none;
 }
+
+}
+
+@media screen and (max-width: 426px) {
+    .box1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 50%;
+        width: 88%;
+        overflow: hidden;
+    }
+    .logo-text{
+        display: none;
+    }
+
+
+
+
+    .we-did {
+        height: 66vh;
+        /* background-color: rgb(4, 174, 89); */
+    }
+    
+    .left-section {
+        width:88%;
+        height: 50vh;
+        /* background-color: #f0f0f0; */
+        padding: 0px 0px 0px 40px;
+        overflow: hidden;
+    }
+   .studio-image img{
+    margin-top: 20px;
+  
+       width:100%;
+       height: 90%;
+   }
+   .gallary{
+    grid-template-columns: auto ;
+}
+   .three-box {
+    /* width: 100%;
+    height: 30vh;
+    display: flex;
+    padding: 0px 10px;
+    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; */
+    margin-top: 30px;
+}
+
+.photo-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    height: 20vh;
+    margin-top: 35px;
+}
+
+
+    .second-frame {
+        height: 56.5vh;
+        width: 100%;
+        display: flex;
+        padding-top: 50px;
+        flex-direction: column; 
+    }
+    .right-section {
+        width: 90%;
+        height: 24vh;
+        padding: 0px 50px 0px 20px;
+        margin-left: 20px;
+    }
+    .we-did {
+        height: 75vh;
+        /* background-color: rgb(4, 174, 89); */
+    }
+    .footer {
+        height: 100vh;
+        /* background-color: rgb(4, 174, 89); */
+        margin-top: 265%;
+    }
 }
