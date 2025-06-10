@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+    --primary-color: #1da1f2;
+    --secondary-color: #fff;
+    --third-color: #000;
+}
+[data-theme="dark"]{
+    --primary-color: #000;
+    --secondary-color: #1da1f2;
+    --third-color: #fff;
+}
+.btn {
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+  border: none;
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  height: 20px;
+  width: 20px;
+  padding: 20px;
+  margin: 20px;
+}

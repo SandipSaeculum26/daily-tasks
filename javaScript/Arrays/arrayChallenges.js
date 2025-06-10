@@ -110,11 +110,21 @@
 
 // --------------------------------------------------spread operator-----------------------------------
 
-const arr1 = [1,2,3,4,5]
-const arr2 = [6,7,8,9,10]
+// const arr1 = [1,2,3,4,5]
+// const arr2 = [6,7,8,9,10]
 
-const String = "sandip";
-const String2 = " yadav";
-const JoinedArray = [...String,...String2]
-JoinedArray.push("m")
-console.log(JoinedArray);
+// const String = "sandip";
+// const String2 = " yadav";
+// const JoinedArray = [...String,...String2]
+// JoinedArray.push("m")
+// console.log(JoinedArray);
+
+
+// const arr = [1,5,7,20,44];
+//  let n = arr.length
+// for (let i = n - 2 ; i < arr.length; i++) {
+//     console.log(arr[i]);
+// }
+
+let usename = new Array(10);
+usename[0] = "sandip";
