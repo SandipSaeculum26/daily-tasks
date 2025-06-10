@@ -3,15 +3,16 @@
   padding: 0;
   box-sizing: border-box;
 }
-:root{
-    --primary-color: #1da1f2;
-    --secondary-color: #fff;
-    --third-color: #000;
+:root {
+  --primary-color: #b50bb2;
+  --secondary-color: #c86515;
+  --third-color: #71128b;
+  --button-color: #1da1f2;
 }
-[data-theme="dark"]{
-    --primary-color: #000;
-    --secondary-color: #1da1f2;
-    --third-color: #fff;
+[data-theme="dark"] {
+  --primary-color: #000;
+  --secondary-color: #1da1f2;
+  --third-color: #fff;
 }
 .btn {
   gap: 20px;
@@ -29,7 +30,7 @@ button {
   width: 100px;
   border-radius: 10px;
   color: var(--secondary-color);
-  background-color: var(--primary-color);
+  background-color: var(--button-color);
   border: none;
   cursor: pointer;
 }
@@ -39,4 +40,16 @@ input[type="checkbox"] {
   width: 20px;
   padding: 20px;
   margin: 20px;
+}
+
+h1 {
+  color: var(--primary-color);
+}
+
+a{
+  color: var(--secondary-color);
+}
+
+p {
+  color: var(--third-color);
 }

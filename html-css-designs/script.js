@@ -6,3 +6,6 @@ function lightmode() {
   document.body.style.backgroundColor = "white";
   document.body.style.color = "black";
 }
+
+document.querySelector(".dark").setAttribute("onclick", "darkmode()");
+document.querySelector(".light").addEventListener("click", lightmode);
