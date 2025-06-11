@@ -36,4 +36,25 @@
 //     console.log( key,': ', person[key]);
 // }
 
+// ----------------------------------------------------forEach Loop------------------------------------------------
 
+// const arr = ["Sandip", "yadav" , "Saeculum"];
+
+// arr.forEach((name,index) => {
+//     console.log(`${index} : ${name}`);  
+// });
+
+// const arr = [10,20,30,40,50];
+
+// const b = arr.map((num) => num *10);
+// console.log(arr);
+
+// console.log(b);
+const arr = [
+  { Fname: "sandip", lname: "yadav" },
+  { Fname: "uttam", lname: "gupta" },
+  { Fname: "shivang", lname: "bhargav" },
+];
+
+const b = arr.map((person) => person.Fname + " " + person.lname);
+console.log(b); 
