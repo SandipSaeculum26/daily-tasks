@@ -1,67 +1,1123 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>dark-light-mode-tailwind</title>
     <link rel="stylesheet" href="output.css" />
+   
+
+
     <script src="theme.js" defer></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <script src="theme.js" defer></script>
+    <script
+    src="https://kit.fontawesome.com/a076d05399.js"
+    crossorigin="anonymous"
+  ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <style>
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      #carScroll::-webkit-scrollbar {
+        display: none;
+      }
+      #carScrol::-webkit-scrollbar{
+        display: none;
+      }
+      #popp::-webkit-scrollbar {
+        display: none;
+      }
+  /* Hide scrollbar for all browsers */
+  #carScroll::-webkit-scrollbar {
+      display: none;
+    }
+    #carScroll {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    </style>
+
+<style>
+  #carScroll::-webkit-scrollbar {
+    display: none;
+  }
+  #carScroll {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+</style>
+
+
   </head>
 
-  <body class="bg-white text-black dark:bg-gray-900 dark:text-white">
-    <!-- Icons -->
-    <div class="flex justify-end items-center">
-     
+  <body
+    class="bg-white relative h-screen  dark:bg-gray-900 overflow-x-auto text-gray-900 dark:text-white"
+  >
 
-     
+
+     <div
+  id="modalWrapper" 
+  class="hidden  absolute w-[90%]  left-5 md:left-15 top-10 p-5 z-555 justify-center h-screen items-center"
+>
+  <div
+  id="pop-Up"
+    class="flex flex-col relative top-0 right-0 overflow-hidden md:flex-row justify-center h-[90%] w-full bg-gray-200 dark:bg-gray-800 rounded-3xl shadow-lg"
+  ><i onclick="closeModal()"
+  class="fas fa-xmark absolute right-4 top-4 text-xl cursor-pointer text-black dark:text-white"
+  ></i>
+    <!-- Left Side (Form) -->
+    <div id="popp" class="w-full  overflow-y-auto  md:w-1/2 p-2 md:p-10 space-y-10">
+      
+      <div class="pt-12 md:pt-0 space-y-5 text-center">
+        <h3 class="text-xl md:text-4xl font-bold">
+          Car Replacement Request
+        </h3>
+        <p class="text-md md:text-xl">
+          Complete the form to receive your replacement car.
+        </p>
+        <p class="text-md md:text-xl">
+          Fields marked with * are mandatory.
+        </p>
+      </div>
+
+      <form class="space-y-5 ">
+        <!-- Full Name -->
+        <div
+          class="px-3 py-4 border border-gray-400 text-gray-700 rounded-3xl w-full"
+        >
+          <input
+            type="text"
+            name="fullname"
+            placeholder="Full Name*"
+            required
+            class="w-full font-bold dark:text-white bg-transparent focus:outline-none"
+          />
+        </div>
+
+        <!-- Email -->
+        <div
+          class="h-15 pt-2 px-3 border border-gray-400 text-gray-700 rounded-3xl w-full"
+        >
+        <label for="email" class="block dark:text-gray-300 text-gray-500 text-sm font-medium ">Email:*</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="ex. exemplu@domeniu.com"
+            required
+            class="w-full font-bold dark:text-white bg-transparent focus:outline-none"
+          />
+        </div>
+
+        <!-- Pickup Location -->
+        <div
+          class="h-15 px-3 pt-2 border border-gray-400 text-gray-700 rounded-3xl w-full"
+        >
+          <label class="block text-sm dark:text-gray-300 font-medium"
+            >Pick-up location:*</label
+          >
+          <select class="w-full rounded-xl focus:outline-none dark:bg-gray-800 dark:text-white ">
+            <option value="">Please select a Pick-up location</option>
+            <option value="loc1">Location 1</option>
+            <option value="loc2">Location 2</option>
+            <option value="loc3">Location 3</option>
+            <option value="loc4">Location 4</option>
+          </select>
+        </div>
+
+        <!-- License Plate -->
+        <div
+          class="h-15 px-3 pt-2 border border-gray-400 text-gray-700 rounded-3xl w-full"
+        >
+        <label for="license" class="block dark:text-gray-300 text-gray-500 text-sm font-medium ">Your License Plate Number*</label>
+          <input
+            type="text"
+            name="license"
+            placeholder="ex. B-123-AAA"
+            required
+            class="w-full font-bold dark:text-white bg-transparent focus:outline-none"
+          />
+        </div>
+
+        <!-- Car Model -->
+        <div
+          class="h-15 px-3 pt-2 border border-gray-400 text-gray-700 rounded-3xl w-full"
+        >
+        <label for="model" class="block text-gray-500 dark:text-gray-300 text-sm font-medium ">Your Car Model*</label>
+          <input
+            type="text"
+            name="model"
+            placeholder="ex. Skoda Skala"
+            required
+            class="w-full dark:text-white font-bold bg-transparent focus:outline-none"
+          />
+        </div>
+
+        <!-- Guilty Party's Insurer -->
+        <div
+          class="h-15 px-3 pt-2 border border-gray-400 text-gray-700 rounded-3xl w-full"
+        >
+          <label class="block text-sm dark:text-gray-300 font-medium mb-1"
+            >Guilty Party's Insurer:*</label
+          >
+          <select class="w-full rounded-xl dark:text-white dark:bg-gray-800 focus:outline-none  ">
+            <option value="">Select insurer</option>
+            <option value="item1">Insurer 1</option>
+            <option value="item2">Insurer 2</option>
+          </select>
+        </div>
+
+        <!-- Additional Info -->
+        <div>
+          <label class="block font-bold text-md mb-1">Information</label>
+          <textarea
+            placeholder="Additional details or comments (optional)"
+            class="p-5 h-32  border border-gray-400 text-gray-700 dark:text-gray-300 rounded-2xl w-full focus:outline-none"
+          ></textarea>
+        </div>
+
+        <!-- Consent -->
+        <div class="text-sm space-y-2">
+          <div>
+            <input type="checkbox" required />
+            *I agree that Klass Wagen SRL may use my personal data as
+            described.
+            <a href="#" class="text-blue-500 underline">Privacy Policy</a>.
+          </div>
+          <div>
+            <input type="checkbox" />
+            I agree to receive offers and news from
+            <a href="#" class="text-blue-500 underline">klasswagen.com</a>.
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="text-center ">
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-400 text-white font-bold w-1/2 h-12 rounded-full"
+          >
+            Send Request
+          </button>
+        </div>
+      </form>
     </div>
 
-    <div class="p-4">
-      <h1 class="text-2xl font-bold">Hello, Tailwind!</h1>
-      <p>This text changes based on the theme.</p>
-
-      <!-- Toggle Button -->
-      <button
-        onclick="toggleTheme()"
-        class="mt-4 px-4 py-2 bg-blue-700 rounded cursor-pointer flex"
-      >
-      <svg
-         id="sunIcon"
-        class="w-6 h-6 text-yellow-500 dark:hidden"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-      >
-        xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-        viewBox="0 0 24 24" stroke="currentColor" >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-        />
-      </svg>
-
-      <svg
-      id="moonIcon"
-      class="w-6 h-6 text-gray-300 hidden dark:inline"
-      xmlns="http://www.w3.org/2000/svg"
-      class="h-6 w-6"
-      fill="none"
-      viewBox="0 0 24 24"
-      stroke="currentColor"
+    <!-- Right Side (Car Section) -->
+    <div
+      class="hidden md:flex flex-col md:w-1/2  dark:bg-gray-700  pt-30 p-6"
     >
-      <path
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-        d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
-      />
-    </svg>
-        Toggle Theme
+    
+
+     <div class="bg-white dark:bg-gray-700 p-15 rounded-4xl">
+      <div class="text-center mb-4 bg-white dark:bg-gray-700 mt-10">
+        <h3 class="text-3xl font-bold">Our Cars</h3>
+        <p class="text-xl font-semibold text-gray-600 dark:text-gray-300">
+          Fleet renewed annually with the latest and safest models
+        </p>
+      </div>
+
+      <!-- Scroll Buttons -->
+      <button id="ab"
+        onclick="scrollCarsLeft()"
+        class="absolute top-5/9 right-132 transform -translate-y-1/2 z-10 bg-white dark:bg-gray-600 p-2 rounded-full shadow"
+      >
+        <i class="fas fa-chevron-left"></i>
       </button>
-      
+      <button id="ab"
+        onclick="scrollCarsRight()"
+        class="absolute top-5/9 right-3 transform -translate-y-1/2 z-10 bg-white dark:bg-gray-600 p-2 rounded-full shadow"
+      >
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Scrollable Car Images -->
+      <div
+        id="carScroll"
+        class="flex overflow-x-auto space-x-5 mt-4 px-4 pb-2  scroll-smooth"
+      >
+        <div class="flex-shrink-0 w-[250px]">
+          <img
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/452e2c71-4cc9-4afe-b45d-e02acb1a79ab-astrastanga.jpg"
+            alt="car"
+            class="w-full h-[160px] object-cover rounded-xl shadow"
+          />
+        </div>
+        <div class="flex-shrink-0 w-[250px]">
+          <img
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/452e2c71-4cc9-4afe-b45d-e02acb1a79ab-astrastanga.jpg"
+            alt="car"
+            class="w-full h-[160px] object-cover rounded-xl shadow"
+          />
+        </div>
+       
+        <div class="flex-shrink-0 w-[250px]">
+          <img
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/452e2c71-4cc9-4afe-b45d-e02acb1a79ab-astrastanga.jpg"
+            alt="car"
+            class="w-full h-[160px] object-cover rounded-xl shadow"
+          />
+        </div>
+        <div class="flex-shrink-0 w-[250px]">
+          <img
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/452e2c71-4cc9-4afe-b45d-e02acb1a79ab-astrastanga.jpg"
+            alt="car"
+            class="w-full h-[160px] object-cover rounded-xl shadow"
+          />
+        </div>
+        <div class="flex-shrink-0 w-[250px]">
+          <img
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/452e2c71-4cc9-4afe-b45d-e02acb1a79ab-astrastanga.jpg"
+            alt="car"
+            class="w-full h-[160px] object-cover rounded-xl shadow"
+          />
+        </div>
+        <div class="flex-shrink-0 w-[250px]">
+          <img
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/452e2c71-4cc9-4afe-b45d-e02acb1a79ab-astrastanga.jpg"
+            alt="car"
+            class="w-full h-[160px] object-cover rounded-xl shadow"
+          />
+        </div>
+        <div class="flex-shrink-0 w-[250px]">
+          <img
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/452e2c71-4cc9-4afe-b45d-e02acb1a79ab-astrastanga.jpg"
+            alt="car"
+            class="w-full h-[160px] object-cover rounded-xl shadow"
+          />
+        </div>
+        <div class="flex-shrink-0 w-[250px]">
+          <img
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/452e2c71-4cc9-4afe-b45d-e02acb1a79ab-astrastanga.jpg"
+            alt="car"
+            class="w-full h-[160px] object-cover rounded-xl shadow"
+          />
+        </div>
+        <div class="flex-shrink-0 w-[250px]">
+          <img
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/bc1ae077-1932-4db8-b25e-72812a0756f0-fabiastanga.jpg"
+            alt="car"
+            class="w-full h-[160px] object-cover rounded-xl shadow"
+          />
+        </div>
+        <div class="flex-shrink-0 w-[250px]">
+          <img
+            src="https://devinlocuiremasina.blob.core.windows.net/imstorage/en-US%2Cen%3Bq%3D0.9/car-company/ca0b195d-3217-499e-90ef-b804e9f0e508-c3stanga.jpg"
+            alt="car"
+            class="w-full h-[160px] object-cover rounded-xl shadow"
+          />
+        </div>
+      </div>
+
+      <p class="text-center mt-4 pb-5 text-gray-600 dark:text-gray-300">
+        We renew our fleet every year!
+      </p>
+    </div>
+  </div>
+</div>
+     </div>
+
+    <!-- Navbar -->
+    
+    <nav
+      class="w-full fixed top-0 z-500 bg-gray-100 dark:bg-gray-800 px-3 py-4 flex items-center justify-between"
+    >
+      <!-- Logo -->
+      <div class="flex justify-between items-center px-2">
+        <img
+          class="rounded-full"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJeKS7e3Ob7LRkdOZo9-7a2pGrzVcjYDy2VQ&s"
+          alt="Logo"
+          height="50"
+          width="80"
+        />
+      </div>
+
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex">
+        <ul class="flex md:space-x-8 lg:space-x-8 items-center">
+          <li>
+            <a
+              class="font-bold hover:text-blue-500 text-gray-400 lg:text-xl"
+              href="#"
+              >Home</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-bold hover:text-blue-500 text-gray-400 lg:text-xl"
+              href="./about.html"
+              >About Us</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-bold hover:text-blue-500 text-gray-400 lg:text-xl"
+              href="./contact.html"
+              >Contact Us</a
+            >
+          </li>
+          <li>
+            <a
+              class="font-bold hover:text-blue-500 text-gray-400 lg:text-xl"
+              href="#how-it-works"
+              >How It Works</a
+            >
+          </li>
+          <li>
+            <select
+              class="cursor-pointer bg-transparent text-gray-400 lg:text-xl border-none outline-none font-bold hover:text-blue-500"
+            >
+              <option>English</option>
+              <option>Hindi</option>
+              <option>Urdu</option>
+              <option>Gujarati</option>
+            </select>
+          </li>
+        </ul>
+      </div>
+
+      <div class="flex items-center gap-2">
+        <div class="hidden lg:flex items-center flex-col">
+          <span class="font-bold text-sm">Contact: M-F: 08:30–17:30</span>
+          <div class="flex gap-2">
+            <div>
+              <i class="fa-solid fa-phone-volume px-1"></i>
+              <a class="font-bold text-sm underline pb-2.5" href="#"
+                >0374023333</a
+              >
+            </div>
+            <div>
+              <i class="fa-brands fa-whatsapp px-1"></i>
+              <a class="font-bold text-sm underline pb-2.5" href="#"
+                >0374023333</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="md:hidden">
+          <i id="menuIcon"
+            onclick="toggleMenu()"
+            class="fa-solid fa-bars text-xl cursor-pointer text-gray-600 dark:text-white"
+          ></i>
+
+        </div>
+
+        <!-- Theme Toggle Button -->
+        <button
+          onclick="toggleTheme()"
+          class="px-3 py-2 bg-sky-700 rounded-full"
+        >
+          <svg
+            id="sunIcon"
+            class="w-6 h-6 text-yellow-400 dark:hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            />
+          </svg>
+          <svg
+            id="moonIcon"
+            class="w-6 h-6 text-white hidden dark:inline"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9 9 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
+          </svg>
+        </button>
+      </div>
+    </nav>
+
+    
+
+    <!-- Mobile Dropdown Menu -->
+    <div
+      id="mobileMenu"
+      class="md:hidden  max-h-0 overflow-hidden pt-28 transition-all duration-500 bg-gray-300 dark:text-white dark:bg-gray-800 "
+    >
+      <ul class="flex flex-col justify-center gap-10 pt-5  font-bold items-center">
+        <li><a href="#">Home</a></li>
+        <li><a href="#location">About us</a></li>
+        <li><a href="#location">Contact Us</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li>
+          <select
+            class="cursor-pointer bg-transparent border-none outline-none dark:bg-gray-800 dark:text-white"
+          >
+            <option>English</option>
+            <option>Hindi</option>
+            <option>Urdu</option>
+            <option>Gujarati</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Hero Section -->
+
+    <section class=" md:pt-28">
+      <div
+        class="flex justify-center  p-3 lg:p-5 relative  gap-5 lg:space-x-5 lg:px-10 md:flex md:flex-row"
+      >
+        <div class="w-full pt-10 space-y-8 md:w-1/3 px-5 lg:px-0 absolute md:static">
+          <div class="lg:px-5">
+            <h1
+              class="text-xl md:text-2xl text-black lg:text-5xl font-bold dark:text-white"
+            >
+             Winning moments!
+            </h1>
+          </div>
+          <div class="lg:px-5">
+            <p
+              class="font-bold text-xl text-black md:text-2xl dark:text-white"
+            >
+              Not your fault? Don't worry!
+            </p>
+            <p class="text-xl md:text-2xl lg:3xl text-gray-500 dark:text-white ">
+              Get a replacement car, for free, during repairs.
+            </p>
+          </div>
+          <div class="lg:px-5">
+            <p
+              class="font-bold text-xl text-gray-500 md:text-black md:text-2xl lg:3xl dark:text-white"
+            >
+              Your car takes a break , but you continue your journey safely.
+            </p>
+          </div>
+
+          <div class="lg:px-5">
+            <button onclick="openModal()"
+              class="border w-full md:w-full  h-10 text-xl cursor-pointer rounded-full text-white bg-blue-600 hover:bg-blue-500"
+            >
+              join Request 
+            </button>
+          </div>
+        </div>
+
+        <div class="w-full md:flex md:w-1/2">
+          <img
+            class="w-full h-[450px] rounded-4xl"
+            src="https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_960,q_50/lsci/db/PICTURES/CMS/340100/340174.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <main class="md:px-30">
+      <div class="flex justify-center pt-20">
+        <h3 class="text-3xl md:text-4xl lg:text-5xl font-bold">
+          Leave it all to us !
+        </h3>
+      </div>
+
+      <div class="px-5 md:py-10 md:px-0 gap-5 flex flex-col md:flex-row">
+        <div class="flex justify-around items-center">
+          <div class="flex flex-col justify-center items-center">
+            <div class="mt-5">
+              <img 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfDm-x6WX4JcCwJ2rZc16SMV6bHcKHOb_4Ng&s"
+                alt=""
+                width="112px"
+              />
+            </div>
+
+            <p class="font-bold text-xl lg:text-3xl mt-5">FREE</p>
+            <p class="text-md lg:text-2xl text-gray-400 mt-5 text-center">
+              All costs are covered by the al-fault driver's insurance.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-around items-center">
+          <div class="flex flex-col justify-center items-center">
+            <div class="mt-5">
+              <img 
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuiKUO1WZoqqdpVs6pAlu_G_bwXLnzndyqjQ&s"
+                alt=""
+                width="200px"
+              />
+            </div>
+
+            <p class="font-bold text-xl lg:text-3xl mt-5">NO LIMITS</p>
+            <p class="text-md lg:text-2xl text-gray-400 mt-5 text-center">
+              You can use your replacement car anywhere in Romania without any
+              mileage restrictions.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex justify-around items-center">
+          <div class="flex flex-col justify-center items-center">
+            <div class="mt-5">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlirciKx-fsQB9F1YNJhX3g57KAzw0sF-dEg&s"
+                alt=""
+                width="150px"
+              />
+            </div>
+
+            <p class="font-bold text-xl lg:text-3xl mt-5">FAST</p>
+            <p class="text-md lg:text-2xl text-gray-400 mt-5 text-center">
+              No time wasted - fast car pick-up and dedicated support, 24/7.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="py-5 px-5 md:px-0 md:py-0 lg:flex lg:gap-25 flex flex-col lg:flex-row"
+      >
+        <div class="px-10 md:px-0 lg:w-1/2 overflow-hidden">
+          <div>
+            <h3 class="text-xl md:text-3xl lg:text-5xl font-bold">
+              Join Team in 3 easy steps
+            </h3>
+          </div>
+          <div>
+            <p class="text:md md:text-2xl lg:font-3xl font-bold mt-5">
+              1. Apply online or contact us directly
+            </p>
+            <p class="text:sm md:text-xl lg:font-2xl mt-3">
+              You can call us at 0374 023 333 or fill in the contact form above,
+              and one of our consultants will get back to you as soon as
+              possible.
+            </p>
+
+            <p class="text:md md:text-2xl lg:font-3xl font-bold mt-5">
+              2. We process and validate your application
+            </p>
+            <p class="text:sm md:text-2xl lg:font-3xl mt-3">
+              Processing and validation are quick, usually within minutes for
+              the simplest cases.
+            </p>
+
+            <p class="text:md md:text-2xl lg:font-3xl font-bold mt-5">
+              3. Pick up the Team
+            </p>
+            <p class="text:sm md:text-2xl lg:font-3xl mt-3">
+              Once your request is validated, go to the chosen location with the
+              required documents and pick up the replacement car free of charge.
+            </p>
+
+            <p class="text:sm md:text-2xl lg:font-3xl mt-5">
+              You benefit from a replacement car for the duration of the
+              repairs, free of charge, through a fast and transparent process.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="mt-5 flex justify-center">
+            <img
+              class="rounded-lg"
+              src="https://t4.ftcdn.net/jpg/03/76/86/01/360_F_376860128_rjqo8WFjhR5jJSTGAEETFSSrvOZ6TWHB.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+     
+
+      <div class="py-5 px-5 md:py-20 relative">
+        <h3 class="text-3xl md:text-6xl font-bold mt-5 text-center">Our teams</h3>
+        <p class="text-md md:text-3xl font-bold mt-5 text-center text-gray-400">
+          Fleet renewed annually with the latest and safest models
+        </p>
+    
+        <!-- Scroll Buttons -->
+        <button
+          onclick="scrolCarsLeft()"
+          class="absolute top-4/7 translate-y-1/2 left-2 z-10 bg-white dark:bg-gray-700 p-2 rounded-full shadow"
+        >
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+    
+        <button
+          onclick="scrolCarsRight()"
+          class="absolute top-2/3 -translate-y-1/2 right-2 z-10 bg-white dark:bg-gray-700 p-2 rounded-full shadow"
+        >
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+    
+        <!-- Scrollable Cars -->
+        <div
+          id="carScrol"
+          class="mt-10 flex gap-4 overflow-x-auto scroll-smooth whitespace-nowrap px-5 py-3"
+          onmouseover="stopAutoScroll()"
+          onmouseout="startAutoScroll()"
+        >
+          <!-- Repeatable Car Item -->
+          <img
+            src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixNFCNIFm0aH1xUBTkbrLQdE__aSNP32JP1zsee3iJW5va96W_r3qyl486fHQilJQjaVBJt0Fl0xAawdBD4duYEg6Sj-MgCNvVfWuA3UpO4oXBr4qt8WeaaS2Fhtbac8mfzE_euPhJ9hQUVxAgWQDLG1WgrJaSv1I2L4XgNGvFoxrdWQq_LUi82XIw/s944/Original%20Delhi%20Capitals%20Logo%20PNG-SVG%20File%20Download%20Free%20Download.png"
+            alt="car"
+            width="200"
+            class="rounded-xl shadow-lg flex-shrink-0"
+          />
+          
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtnkiv0rux_VvyMBlcGsSYaeBe78nOUHUIitg58dufAKWDHNrCTxEafbiSBcxf3iL1JHk&usqp=CAU"
+            alt="car"
+            width="200"
+            class="rounded-xl shadow-lg flex-shrink-0"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqsMe10pw1WJpo9Rfs1yz-iIdmyiULx6mrbqiRbnTjcpfDwJAPR4DJGZBcCT8HZpLi64&usqp=CAU"
+            alt="car"
+            width="200"
+            class="rounded-xl shadow-lg flex-shrink-0"
+          />
+          <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuiKUO1WZoqqdpVs6pAlu_G_bwXLnzndyqjQ&s"
+            alt="car"
+            width="200"
+            class="rounded-xl shadow-lg flex-shrink-0"
+          />
+          <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlirciKx-fsQB9F1YNJhX3g57KAzw0sF-dEg&s"
+            alt="car"
+            width="200"
+            class="rounded-xl shadow-lg flex-shrink-0"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ24li3G1E0eqAMnWtJsiBO_h16yLDYUh1KSQ&s"
+            alt="car"
+            width="200"
+            class="rounded-xl shadow-lg flex-shrink-0"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT617ge4SkR7GGksYTipBXZslbGSdj06UbbwGsWBDgbaMkI8gzrsOY2jmxawd0uHZf781w&usqp=CAU"
+            alt="car"
+            width="200"
+            class="rounded-xl shadow-lg flex-shrink-0"
+          />
+          <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlpG45bFMgzhfm-OW2cvkG2Ghwm2FKJkhbew&s"
+            alt="car"
+            width="200"
+            class="rounded-xl shadow-lg flex-shrink-0"
+          />
+          <img
+            src="https://static.vecteezy.com/system/resources/previews/059/494/376/non_2x/rajasthan-royals-original-ipl-team-official-logo-premium-design-for-digital-download-free-vector.jpg"
+            alt="car"
+            width="200"
+            class="rounded-xl shadow-lg flex-shrink-0"
+          />
+          <img
+            src="https://logowik.com/content/uploads/images/punjab-kings6722.logowik.com.webp"
+            alt="car"
+            width="200"
+            class="rounded-xl shadow-lg flex-shrink-0"
+          />
+
+          <img
+          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEixNFCNIFm0aH1xUBTkbrLQdE__aSNP32JP1zsee3iJW5va96W_r3qyl486fHQilJQjaVBJt0Fl0xAawdBD4duYEg6Sj-MgCNvVfWuA3UpO4oXBr4qt8WeaaS2Fhtbac8mfzE_euPhJ9hQUVxAgWQDLG1WgrJaSv1I2L4XgNGvFoxrdWQq_LUi82XIw/s944/Original%20Delhi%20Capitals%20Logo%20PNG-SVG%20File%20Download%20Free%20Download.png"
+          alt="car"
+          width="200"
+          class="rounded-xl shadow-lg flex-shrink-0"
+        />
+        
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtnkiv0rux_VvyMBlcGsSYaeBe78nOUHUIitg58dufAKWDHNrCTxEafbiSBcxf3iL1JHk&usqp=CAU"
+          alt="car"
+          width="200"
+          class="rounded-xl shadow-lg flex-shrink-0"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmqsMe10pw1WJpo9Rfs1yz-iIdmyiULx6mrbqiRbnTjcpfDwJAPR4DJGZBcCT8HZpLi64&usqp=CAU"
+          alt="car"
+          width="200"
+          class="rounded-xl shadow-lg flex-shrink-0"
+        />
+        <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTuiKUO1WZoqqdpVs6pAlu_G_bwXLnzndyqjQ&s"
+          alt="car"
+          width="200"
+          class="rounded-xl shadow-lg flex-shrink-0"
+        />
+        <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlirciKx-fsQB9F1YNJhX3g57KAzw0sF-dEg&s"
+          alt="car"
+          width="200"
+          class="rounded-xl shadow-lg flex-shrink-0"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ24li3G1E0eqAMnWtJsiBO_h16yLDYUh1KSQ&s"
+          alt="car"
+          width="200"
+          class="rounded-xl shadow-lg flex-shrink-0"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT617ge4SkR7GGksYTipBXZslbGSdj06UbbwGsWBDgbaMkI8gzrsOY2jmxawd0uHZf781w&usqp=CAU"
+          alt="car"
+          width="200"
+          class="rounded-xl shadow-lg flex-shrink-0"
+        />
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlpG45bFMgzhfm-OW2cvkG2Ghwm2FKJkhbew&s"
+          alt="car"
+          width="200"
+          class="rounded-xl shadow-lg flex-shrink-0"
+        />
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/059/494/376/non_2x/rajasthan-royals-original-ipl-team-official-logo-premium-design-for-digital-download-free-vector.jpg"
+          alt="car"
+          width="200"
+          class="rounded-xl shadow-lg flex-shrink-0"
+        />
+        <img
+          src="https://logowik.com/content/uploads/images/punjab-kings6722.logowik.com.webp"
+          alt="car"
+          width="200"
+          class="rounded-xl shadow-lg flex-shrink-0"
+        />
+          
+          <!-- Add more as needed -->
+        </div>
+      </div>
+
+
+    </main>
+
+    <!-- --------------------------------main-end----------------------------- -->
+    <section id="how-it-works" class="px-0 lg:px-20">
+      <div
+        class="px-5 py-5 md:px-15 md:py-20 bg-sky-200 dark:bg-gray-600 rounded-4xl"
+      >
+        <div class="px-5 md:px-10 py-5 rounded-4xl bg-white dark:bg-gray-400">
+          <div>
+            <h3
+              class="text-3xl md:text-4xl lg:text-5xl font-bold mt-5 dark:text-white"
+            >
+              How To Play
+            </h3>
+          </div>
+          <div class="pt-10">
+            <div>
+              <p class="text-md md:text-xl text-gray-600 dark:text-white">
+                According to the applicable legislation, you are entitled to a
+                replacement car for a maximum period established by ASF Norm no.
+                20/2017, updated by ASF Norm no. 18/2022, Article 25, which
+                states:
+              </p>
+              <p class="text-md md:text-xl text-gray-600 dark:text-white">
+                Art. 25: (1) In the event that, as a result of a risk covered by
+                the RCA insurance contract, the vehicle of the injured party is
+                damaged, the RCA insurer shall compensate for the loss of use of
+                the damaged vehicle during the repairs period, in accordance
+                with the applicable legal provisions.
+              </p>
+            </div>
+            <div class="pt-3">
+              <h4 class="text-2xl">1. Personal documents</h4>
+              <ul>
+                <li class="text-md md:text-xl text-gray-600 dark:text-white">
+                  • Identity Card (ID) / Passport – copy
+                </li>
+                <li class="text-md md:text-xl text-gray-600 dark:text-white">
+                  • Driving License – copy
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-2xl pt-2">
+                2. Documents related to the accident and compensation
+              </h4>
+              <ul>
+                <li class="text-md md:text-xl text-gray-600 dark:text-white">
+                  • Accident report issued by the Police
+                </li>
+                <li class="text-md md:text-xl text-gray-600 dark:text-white">
+                  • Amicable accident statement, completed and signed by both
+                  parties involved
+                </li>
+                <li class="text-md md:text-xl text-gray-600 dark:text-white">
+                  • Proof of damage file registration at the RCA insurer of the
+                  at-fault driver
+                </li>
+                <li class="text-md md:text-xl text-gray-600 dark:text-white">
+                  • Damage assessment report issued by the insurer
+                </li>
+                <li class="text-md md:text-xl text-gray-600 dark:text-white">
+                  • Payment acceptance from the RCA insurer to cover the loss of
+                  use of the damaged vehicle
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="text-2xl pt-2">
+                3. Documents related to the damaged vehicle
+              </h4>
+              <ul>
+                <li class="text-md md:text-xl l text-gray-600 dark:text-white">
+                  • Vehicle Registration Certificate (logbook) – copy
+                </li>
+                <li class="text-md md:text-xl text-gray-600 dark:text-white">
+                  • RCA Insurance Policy of the at-fault driver – copy
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div
+          class="py-10 flex-col justify-between gap-1
+          5 space-y-5 md:flex md:flex-row"
+        >
+          <div class="w-full md:w-1/2">
+            <h5 class="text-xl lg:text-4xl">
+              When your car takes a break, we keep you going.
+            </h5>
+            <div class="pt-5">
+              <span class="text-2xl md:text-3xl lg:text-4xl font-bold"
+                >FREE!</span
+              >
+            </div>
+          </div>
+
+          <div class="flex w-full lg:w-1/2 flex-col gap-2 justify-center items-center">
+            <div>
+              <h3 class="text-xl md:text-2xl lg:text-3xl font-bold">
+                Contact Us
+              </h3>
+            </div>
+            <div class="w-full lg:w-[400px]">
+              <button
+                class="border h-12 w-full rounded-4xl text-center text-white font-bold underline bg-black dark:text-black dark:bg-white hover:bg-teal-500 cursor-pointer"
+              >
+                @inlocuriemasinakl.in
+              </button>
+            </div>
+
+            <div class="w-full lg:w-[400px]">
+              <button
+                class="border h-12 w-full rounded-4xl text-white font-bold underline dark:text-black dark:bg-white bg-black hover:bg-teal-500 cursor-pointer"
+              >
+                037402333
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-----------------------------------------------Location------------------------------------------ -->
+    <section
+      id="location"
+      class="px-5 py-5 md:px-10 md:py-10 lg:px-20 lg:py-15 max-w-screen gap-5"
+    >
+      <div class="flex w-full flex-col justify-between gap-5 md:flex-row">
+        <div class="space-y-5  md:w-full">
+          <div>
+            <h3
+              class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-600 dark:text-gray-100"
+            >
+              Our Location
+            </h3>
+          </div>
+
+          <div class="">
+            <select
+              class="w-full md:w-[300px] lg:w-1/2 p-2 h-12 border overflow-y-scroll rounded-4xl border-gray-300 shadow-sm focus:outline-none dark:bg-black"
+            >
+              <option value="item1">Location 1</option>
+              <option value="item2">Location 2</option>
+              <option value="item3">Location 3</option>
+              <option value="item4">Location 4</option>
+              <option value="item5">Location 5</option>
+            </select>
+          </div>
+         
+
+          <div id="request">
+            <button
+              class="border text-2xl w-full md:w-[300px] lg:w-1/2 h-12 rounded-4xl text-center text-white font-bold bg-blue-500 hover:bg-teal-900 cursor-pointer"
+            >
+              Request car
+            </button>
+          </div>
+        </div>
+
+        <div class="md:w-full h-[400px] flex justify-center">
+          <iframe
+            class="w-full h-full rounded-2xl dark:border-gray-80 0"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.035156361534!2d78.04214221453886!3d27.175144983008396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39747cbf92e2ff3b%3A0x28b0884726a2f6e9!2sTaj%20Mahal!5e0!3m2!1sen!2sin!4v1620380199244!5m2!1sen!2sin"
+            allowfullscreen=""
+            loading="lazy"
+          >
+          </iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- -------------------------------------------------------footer-------------------------------------------------------- -->
+
+    <footer class="px-5 md:px-5 bg-gray-300 dark:bg-black">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 px-5 py-5 md:px-10 md:py-10"
+      >
+        <div class="space-y-5">
+          <div>
+            <img class="rounded-4xl"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJeKS7e3Ob7LRkdOZo9-7a2pGrzVcjYDy2VQ&s"
+              alt=""
+              width="50px"
+              height="100px"
+            />
+          </div>
+          <div class="space-y-3">
+            <div>
+              <a class="font-bold text-sky-700" href="#">E-MAIL</a>
+              <p class="text-gray-600 dark:text-gray-300">
+                Sandipyadav@Example.com
+              </p>
+            </div>
+
+            <div>
+              <a class="font-bold text-sky-700" href="#">E-MAIL</a>
+              <p class="text-gray-600 dark:text-gray-300">
+                Sandipyadav@Example.com
+              </p>
+            </div>
+
+            <div>
+              <a class="font-bold text-sky-700" href="#">E-MAIL</a>
+              <p class="text-gray-600 dark:text-gray-300">
+                Sandipyadav@Example.com
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="space-y-5">
+            <p class="text-2xl font-bold">Useful</p>
+            <p class="text-xl text-gray-500 dark:text-gray-300">About Us</p>
+            <p class="text-xl text-gray-500 - dark:text-gray-300">
+              Terms and Conditions
+            </p>
+            <p class="text-xl text-gray-500 dark:text-gray-300">
+              Privacy Policy
+            </p>
+            <p class="text-gray-500 text-xl dark:text-gray-300">Rent a Car</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="space-y-3">
+            <p class="text-2xl font-bold">Romania</p>
+            <p class="text-gray-500 text-xl dark:text-gray-300">Bacau</p>
+            <p class="text-gray-500 text-xl dark:text-gray-300">Bucharest</p>
+            <p class="text-gray-500 text-xl dark:text-gray-300">Timisoara</p>
+            <p class="text-gray-500 text-xl dark:text-gray-300">Iasi</p>
+            <p class="text-gray-500 text-xl dark:text-gray-300">Cluj-Napoca</p>
+            <p class="text-gray-500 text-xl dark:text-gray-300">Craiova</p>
+            <p class="text-gray-500 text-xl dark:text-gray-300">Sibiu</p>
+            <p class="text-gray-500 text-xl dark:text-gray-300">Suceava</p>
+          </div>
+        </div>
+
+        <div class="space-y-3">
+          <p class="font-bold text-2xl">Comercial data</p>
+          <p class="text-gray-500 dark:text-gray-300 text-xl">
+            Klass Wagen SRL Timisoara, str. B-dul 16 Decembrie 1989, no. 35,
+            county Timis J35/351/2005 RO 17197919.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 px-4 py-5 md:px-10 gap-5">
+        <div class="cursor-pointer space-x-5">
+          <i
+            class="fa-brands fa-facebook bg-gray-200 dark:bg-sky-400 px-2 py-2 rounded-full text-2xl"
+          ></i>
+          <i
+            class="fa-brands fa-instagram bg-gray-200 dark:bg-sky-400 px-2 py-2 rounded-full text-2xl"
+          ></i>
+          <i
+            class="fa-brands fa-twitter bg-gray-200 dark:bg-sky-400 px-2 py-2 rounded-full text-2xl"
+          ></i>
+          <i
+            class="fa-brands fa-youtube bg-gray-200 dark:bg-sky-400 px-2 py-2 rounded-full text-2xl"
+          ></i>
+        </div>
+
+        <div class="flex justify-end w-full md:w-[300px] lg:w-[450px] mx-auto flex-col ">
+          <div
+            class="bg-black dark:bg-white px-2 py-2 space-y-10  rounded-3xl"
+          >
+            <div class="lg:px-10">
+              <p class="text-white text-center dark:text-black text-xl">
+                I want to receive offers and news from replacementmasina.com
+                Klass Wagen.
+              </p>
+            </div>
+            <div class="px-5">
+              <button
+                class="text-white w-full cursor-pointer h-10 rounded-4xl bg-sky-600"
+              >
+                SubScribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="text-gray-400" />
+
+      <div class="grid grid-cols-1 md:grid-cols-3  py-5   gap-2 lg:gap-5">
+        <div class="flex gap-1 lg:gap-10 justify-center items-end text-gray-500">
+          <div class="dark:text-white ">
+            <a class="text-sm md:text-md " href="#">Privacy notice & Legal notice</a>
+          </div>
+          <div class="dark:text-white"><a href="#">T&C</a></div>
+        </div>
+        <div class="flex justify-center space-x-15 md:space-x-5 lg:space-x-30">
+          <div>
+            <img
+              src="https://www.shutterstock.com/image-vector/ipl-team-lucknow-super-giants-260nw-2308550963.jpg"
+              height="50px"
+              width="350px"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://www.shutterstock.com/image-vector/ipl-team-lucknow-super-giants-260nw-2308550963.jpg"
+              height="50px"
+              width="350px"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="flex justify-center lg:justify-end items-end text-gray-500 dark:text-white">
+          <p class="text-sm md:text-md">2016-2025 © KlassWagen. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
     </div>
   </body>
 </html>
+
+ 
