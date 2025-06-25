@@ -126,5 +126,30 @@
 //     console.log(arr[i]);
 // }
 
-let usename = new Array(10);
-usename[0] = "sandip";
+// let usename = new Array(10);
+// usename[0] = "sandip";
+
+
+const arr = [1,5,7,20,44];
+//  number = 7;
+
+//  for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] == number) {
+//         console.log(arr[i]);
+//     }else{
+//         console.log("not found");
+//     }
+// }
+
+// if (arr.includes(7)) {
+//     console.log("found");
+// }else{
+//     console.log("not found");
+// }
+
+//  if(arr.reverse()){
+//     console.log(arr);
+//  }
+
+
+  console.log(arr.reverse());
