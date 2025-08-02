@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="./output.css" rel="stylesheet" />
+    <script src="./Scipt.js" defer></script>
+    <style>
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header -->
+    <section
+      class="px-4 md:px-8 lg:px-10 min-h-screen bg-gray-100"
+      style="
+        background-image: url('./assets//backgroundImage/background.avif');
+        background-size: cover;
+        background-position: center;
+      "
+    >
+      <div class="max-w-3xl  lg:mx-auto ">
+        <!-- header -->
+        <header
+          class="flex justify-between mx-2 items-center lg:space-x-10  rounded-2xl p-3 bg-gray-100  shadow-md fixed space-x-5 top-5 lg:top-6 left-1/2 transform -translate-x-1/2  w-full max-w-6xl z-50"
+        >
+          <div class="pl-2 cursor-pointer">
+            <span class="text-red-600 text-xl md:text-2xl font-extrabold"
+              >Swift</span
+            ><span class="text-blue-600 text-xl md:text-2xl font-extrabold"
+              >Rooter</span
+            >
+          </div>
+          
+         
+          <!-- Nav links -->
+          <nav
+            id="nav-links"
+            class="flex-col lg:flex-row gap-4  items-center absolute lg:static top-full left-0 w-full lg:w-auto bg-white lg:bg-transparent shadow-lg lg:shadow-none z-40 p-2 lg:p-0 hidden lg:flex"
+          > <ul class="flex flex-col lg:flex-row gap-4">
+            <li class="font-semibold text-gray-700 hover:text-blue-600 hover:underline hover:underline-offset-6 text-lg">Home</li>
+            <li class="font-semibold text-gray-700 hover:text-blue-600 hover:underline hover:underline-offset-6 text-lg">Services</li>
+            <li class="font-semibold text-gray-700 hover:text-blue-600 hover:underline hover:underline-offset-6 text-lg">About Us</li>
+            <li class="font-semibold text-gray-700 hover:text-blue-600 hover:underline hover:underline-offset-6 text-lg">
+              <a href="./pages/contact.html">Contact Us</a>
+            </ul>
+          </nav>
+
+          <div class="flex items-center">
+            <div>
+               <button
+            id="menu-toggle"
+            class="block lg:hidden p-2 focus:outline-none"
+            aria-label="Open Menu"
+          >
+            <!-- Hamburger Icon -->
+            <svg
+              id="menu-icon"
+              class="w-7 h-7 text-gray-700"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            
+          </button>
+            </div>
+            <button
+              class="bg-blue-500 text-white px-4 py-2 rounded-lg cursor-pointer flex items-center gap-2"
+            >
+              <img src="./assets/Vector.svg" alt="" />
+              <div class="hidden font-semibold  lg:block">Get Template</div>
+            </button>
+          </div>
+        </header>
+        <!-- main -->
+        <main
+          class="flex flex-col gap-5 items-center font-semibold lg:px-20 mx-auto pt-30 lg:pt-26 max-w-4xl"
+        >
+          <div class="text-center text-xl lg:text-5xl">
+            <span class="text-red-600 text-3xl lg:text-5xl font-bold"
+              >Swift</span
+            ><span class="text-blue-600 text-3xl lg:text-5xl">Rooter</span> -
+            Fast & Reliable Plumbing Services
+          </div>
+          <div class="text-md lg:text-xl text-gray-700 text-center lg:px-10">
+            Your trusted partner for fast, reliable, and professional plumbing
+            and rooter services. Whether it's a clogged drain, emergency
+            plumbing, or a full pipe replacement, SwiftRooter has you covered
+            24/7.
+          </div>
+          <!-- membership -->
+          <div class="flex items-center gap-4">
+            <div>
+              <img src="./assets/Avatar Container.svg" alt="" />
+            </div>
+            <div>
+              <div class="text-xl font-semibold">
+                <span class="font-bold text-lg lg:text-xl text-blue-600"
+                  >16K+</span
+                >
+                Membership
+              </div>
+              <div class="text-smlg:text-lg">Enjoy our facilities</div>
+            </div>
+          </div>
+
+
+          <div
+            class="w-full flex justify-center  lg:absolute lg:left-0 lg:right-0 lg:bottom-0"
+          >
+            <form
+              class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-2 w-full max-w-6xl bg-white  p-6 rounded-2xl shadow"
+            >
+              <div class="flex flex-col col-span-1">
+                <label for="name" class="mb-1 font-semibold text-gray-700"
+                  >Name</label
+                >
+                <input
+                  type="text"
+                  name="name"
+                  class="border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-400"
+                  placeholder="Enter your name"
+                  required
+                />
+              </div>
+              <div class="flex flex-col col-span-1">
+                <label for="email" class="mb-1 font-semibold text-gray-700"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  class="border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-400"
+                  placeholder="Enter your email"
+                   required
+                />
+              </div>
+              <div class="flex flex-col col-span-1">
+                <label for="phone" class="mb-1 font-semibold text-gray-700"
+                  >Phone Number</label
+                >
+                <input
+                  type="tel"
+                  name="phone"
+                  class="border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-400"
+                  placeholder="Enter your phone number"
+                   required
+                />
+              </div>
+              <div class="flex flex-col col-span-1">
+                <label for="zip" class="mb-1 font-semibold text-gray-700"
+                  >Zip Code</label
+                >
+                <input
+                  type="text"
+                  name="zip"
+                  class="border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-1 focus:ring-blue-400"
+                  placeholder="Enter your zip code"
+                   required
+                />
+              </div>
+              <button
+                type="submit"
+                class="col-span-1 sm:col-span-2 lg:col-span-1 lg:mt-7 bg-black text-white font-semibold rounded px-6 cursor-pointer py-2 w-full h-fit"
+              >
+                Request a Call
+              </button>
+              <div
+                class="col-span-1 sm:col-span-2 text-sm lg:col-span-5 text-gray-400 text-start"
+              >
+                By submitting your contact details, you agree to receive
+                automated SMS/MMS messages from SwiftRooter Plumbing. Message &
+                data rates may apply.
+              </div>
+            </form>
+          </div>
+        </main>
+      </div>
+    </section>
+
+
+
+   
+
+  <!-- Our Services -->
+    <section class="px-4 md:px-8 lg:px-10 py-16 bg-white">
+      <div class="max-w-7xl mx-auto flex flex-col gap-8">
+        <div class="flex flex-col justify-between">
+          <div
+            class="border bg-gray-100 border-gray-300 cursor-pointer w-fit px-2 py-1 rounded-lg font-semibold text-gray-800"
+          >
+          <img class="inline" src="./assets/V0SmoVPU1tdoEEhuGxu24JRAj5k.svg.svg" alt="">
+            Services
+          </div>
+          <div
+            class="flex items-center justify-between gap-8"
+          >
+            <div
+              class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800"
+            >
+            
+              Our Services
+            </div>
+            <div class="flex flex-col md:flex-row gap-3 cursor-pointer bg-gray-100 w-fit px-2 py-2 rounded-lg">
+              <div class="bg-black text-white px-8 py-2 rounded-lg">Residential</div>
+              <div class="bg-white text-black px-8 py-2 rounded-lg">Commercial</div>
+            </div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 cursor-pointer sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div
+            class="bg-gray-100  rounded-2xl px-2 py-5 flex flex-col gap-3 items-center text-start shadow  transition-transform duration-300 hover:scale-105"
+          >
+            <div class="pl-3 flex flex-col gap-1">
+              <div class="flex items-center justify-between">
+                <div class="text-gray-900 font-semibold text-md lg:text-xl">
+                  24/7 Emergency Plumbing
+                </div>
+                <div class="bg-white text-black px-2 py-2 rounded-full text-lg">
+                  <img src="./assets/ourServices/KsdYrytFAS5L4zLiLBxNXErAYY.svg.svg" alt="">
+                </div>
+              </div>
+              <div class="text-gray-700 text-sm">
+                Quick response for leadks, burst pipes,and urgent plumbing
+                needs.
+              </div>
+            </div>
+            <div>
+              <img src="./assets/Gradient.svg" alt="Service 1" />
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div
+            class="bg-gray-100 rounded-2xl px-2 py-5 flex flex-col gap-3 items-center text-start shadow  transition-transform duration-300 hover:scale-105"
+          >
+            <div class="pl-3 flex flex-col gap-1">
+              <div class="flex items-center justify-between">
+                <div class="text-gray-900 font-semibold text-md lg:text-xl">
+                  Drain Cleaning
+                </div>
+                 <div class="bg-white text-black px-2 py-2 rounded-full text-lg">
+                  <img src="./assets/ourServices/KsdYrytFAS5L4zLiLBxNXErAYY.svg.svg" alt="">
+                </div>
+              </div>
+              <div class="text-gray-700 text-sm">
+                Quick response for leadks, burst pipes,and urgent plumbing
+                needs.
+              </div>
+            </div>
+            <div>
+              <img src="./assets/ourServices/Gradient (2).svg" alt="Service 1" class="" />
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div
+            class="bg-gray-100 rounded-2xl px-2 py-5 flex flex-col gap-3 items-center text-start shadow  transition-transform duration-300 hover:scale-105"
+          >
+            <div class="pl-3 flex flex-col gap-1">
+              <div class="flex items-center justify-between">
+                <div class="text-gray-900 font-semibold text-md lg:text-xl">
+                  Water Heater 
+                </div>
+                 <div class="bg-white text-black px-2 py-2 rounded-full text-lg">
+                  <img src="./assets/ourServices/KsdYrytFAS5L4zLiLBxNXErAYY.svg.svg" alt="">
+                </div>
+              </div>
+              <div class="text-gray-700 text-sm">
+                Quick response for leadks, burst pipes,and urgent plumbing
+                needs.
+              </div>
+            </div>
+            <div>
+              <img src="./assets/ourServices/Gradient (3).svg" alt="Service 1" class="" />
+            </div>
+          </div>
+          <!-- Card 4 -->
+          <div
+            class="bg-gray-100 rounded-2xl px-2 py-5 flex flex-col gap-3 items-center text-start shadow  transition-transform duration-300 hover:scale-105"
+          >
+            <div class="pl-3 flex flex-col gap-1">
+              <div class="flex items-center justify-between">
+                <div class="text-gray-900 font-semibold text-md lg:text-xl">
+                  Bathroom & Kitchen
+                </div>
+                 <div class="bg-white text-black px-2 py-2 rounded-full text-lg">
+                  <img src="./assets/ourServices/KsdYrytFAS5L4zLiLBxNXErAYY.svg.svg" alt="">
+                </div>
+              </div>
+              <div class="text-gray-700 text-sm">
+                Quick response for leadks, burst pipes,and urgent plumbing
+                needs.
+              </div>
+            </div>
+            <div>
+              <img src="./assets/ourServices/Gradient (4).svg" alt="Service 1" class="" />
+            </div>
+          </div>
+          <!-- Card 5 -->
+          <div
+            class="bg-gray-100 rounded-2xl px-2 py-5 flex flex-col gap-3 items-center text-start shadow  transition-transform duration-300 hover:scale-105"
+          >
+            <div class="pl-3 flex flex-col gap-1">
+              <div class="flex items-center justify-between">
+                <div class="text-gray-900 font-semibold text-md lg:text-xl">
+                  Leak Detection
+                </div>
+                 <div class="bg-white text-black px-2 py-2 rounded-full text-lg">
+                  <img src="./assets/ourServices/KsdYrytFAS5L4zLiLBxNXErAYY.svg.svg" alt="">
+                </div>
+              </div>
+              <div class="text-gray-700 text-sm">
+                Quick response for leadks, burst pipes,and urgent plumbing
+                needs.
+              </div>
+            </div>
+            <div>
+              <img src="./assets/ourServices/Gradient (5).svg" alt="Service 1" class="" />
+            </div>
+          </div>
+          <!-- Card 6 -->
+          <div
+            class="bg-gray-100 rounded-2xl px-2 py-5 flex flex-col gap-3 items-center text-start shadow  transition-transform duration-300 hover:scale-105"
+          >
+            <div class="pl-3 flex flex-col gap-1">
+              <div class="flex items-center justify-between">
+                <div class="text-gray-900 font-semibold text-md lg:text-xl">
+                  Sewer & Septic
+                </div>
+                 <div class="bg-white text-black px-2 py-2 rounded-full text-lg">
+                  <img src="./assets/ourServices/KsdYrytFAS5L4zLiLBxNXErAYY.svg.svg" alt="">
+                </div>
+              </div>
+              <div class="text-gray-700 text-sm">
+                Quick response for leadks, burst pipes,and urgent plumbing
+                needs.
+              </div>
+            </div>
+            <div>
+              <img src="./assets/ourServices/Gradient (6).svg" alt="Service 1" class="" />
+            </div>
+          </div>
+          <!-- Card 7 -->
+          <div
+            class="bg-gray-100 rounded-2xl px-2 py-5 flex flex-col gap-3 items-center text-start shadow  transition-transform duration-300 hover:scale-105"
+          >
+            <div class="pl-3 flex flex-col gap-1">
+              <div class="flex items-center justify-between">
+                <div class="text-gray-900 font-semibold text-md lg:text-xl">
+                  Garbage Disposal
+                </div>
+                 <div class="bg-white text-black px-2 py-2 rounded-full text-lg">
+                  <img src="./assets/ourServices/KsdYrytFAS5L4zLiLBxNXErAYY.svg.svg" alt="">
+                </div>
+              </div>
+              <div class="text-gray-700 text-sm">
+                Quick response for leadks, burst pipes,and urgent plumbing
+                needs.
+              </div>
+            </div>
+            <div>
+              <img src="./assets/ourServices/Gradient (7).svg " alt="Service 1" class="" />
+            </div>
+          </div>
+          <!-- Card 8 -->
+          <div
+            class="bg-gray-100 rounded-2xl px-2 py-5 flex flex-col gap-3 items-center text-start shadow  transition-transform duration-300 hover:scale-105"
+          >
+            <div class="pl-3 flex flex-col gap-1">
+              <div class="flex items-center justify-between">
+                <div class="text-gray-900 font-semibold text-md lg:text-xl">
+                  Repining
+                </div>
+                 <div class="bg-white text-black px-2 py-2 rounded-full text-lg">
+                  <img src="./assets/ourServices/KsdYrytFAS5L4zLiLBxNXErAYY.svg.svg" alt="">
+                </div>
+              </div>
+              <div class="text-gray-700 text-sm">
+                Quick response for leadks, burst pipes,and urgent plumbing
+                needs.
+              </div>
+            </div>
+            <div>
+              <img src="./assets/ourServices/Gradient (8).svg" alt="Service 1" class="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+ <!-- Why Choose SwiftRooter? -->
+    <section class="px-4 md:px-8 lg:px-10 py-16 bg-white">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        <!-- Left -->
+        <div class="flex flex-col gap-4">
+          <div
+            class="border bg-gray-100 border-gray-300 w-fit px-2 py-1 rounded-lg font-semibold text-gray-800"
+          >
+          <img class="inline" src="./assets/V0SmoVPU1tdoEEhuGxu24JRAj5k.svg.svg" alt="">
+            Why Choose
+          </div>
+          <div class="flex flex-col gap-2">
+            <div
+              class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800"
+            >
+              Why Choose SwiftRooter?
+            </div>
+            <div class="flex gap-3 text-gray-500 font-semibold">
+              Reliable, fast, and professional plumbing solutions with 24/7
+              availability, upfront pricing, and expert service for homes and
+              businesses.
+            </div>
+          </div>
+          <div>
+            <img src="./assets/swiftRooter/Why Choose Image (1).svg" alt="">
+          </div>
+        </div>
+        <!-- Rights -->
+        <div
+          class="h-screen overflow-y-auto pr-2 scrollbar-hide flex flex-col gap-4"
+        >
+          <div class="flex flex-col gap-2 bg-gray-100 rounded-2xl p-4 shadow">
+            <div class="flex items-center gap-3">
+              <img src="./assets/whyChoose/Group.svg" alt="Icon" class="w-8 h-8" />
+              <div class="font-bold text-lg text-gray-900">
+                Fast Response Time
+              </div>
+            </div>
+            <div class="text-gray-500 font-semibold text-sm">
+              We understand that plumbing emergencies can't wait. Our team is
+              available 24/7 to ensure that your issues are resolved quickly,
+              minimizing damage and inconvenience.
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 bg-gray-100 rounded-2xl p-4 shadow">
+            <div class="flex items-center gap-3">
+              <img src="./assets/whyChoose/Certified & Experienced Plumbers.svg" alt="Icon" class="w-8 h-8" />
+              <div class="font-bold text-lg text-gray-900">
+                Fast Response Time
+              </div>
+            </div>
+            <div class="text-gray-500 font-semibold text-sm">
+              We understand that plumbing emergencies can't wait. Our team is
+              available 24/7 to ensure that your issues are resolved quickly,
+              minimizing damage and inconvenience.
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 bg-gray-100 rounded-2xl p-4 shadow">
+            <div class="flex items-center gap-3">
+              <img src="./assets/whyChoose/Group.svg" alt="Icon" class="w-8 h-8" />
+              <div class="font-bold text-lg text-gray-900">
+                Fast Response Time
+              </div>
+            </div>
+            <div class="text-gray-500 font-semibold text-sm">
+              We understand that plumbing emergencies can't wait. Our team is
+              available 24/7 to ensure that your issues are resolved quickly,
+              minimizing damage and inconvenience.
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 bg-gray-100 rounded-2xl p-4 shadow">
+            <div class="flex items-center gap-3">
+              <img src="./assets/whyChoose/Group.svg" alt="Icon" class="w-8 h-8" />
+              <div class="font-bold text-lg text-gray-900">
+                Fast Response Time
+              </div>
+            </div>
+            <div class="text-gray-500 font-semibold text-sm">
+              We understand that plumbing emergencies can't wait. Our team is
+              available 24/7 to ensure that your issues are resolved quickly,
+              minimizing damage and inconvenience.
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 bg-gray-100 rounded-2xl p-4 shadow">
+            <div class="flex items-center gap-3">
+              <img src="./assets/whyChoose/Group.svg" alt="Icon" class="w-8 h-8" />
+              <div class="font-bold text-lg text-gray-900">
+                Fast Response Time
+              </div>
+            </div>
+            <div class="text-gray-500 font-semibold text-sm">
+              We understand that plumbing emergencies can't wait. Our team is
+              available 24/7 to ensure that your issues are resolved quickly,
+              minimizing damage and inconvenience.
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 bg-gray-100 rounded-2xl p-4 shadow">
+            <div class="flex items-center gap-3">
+              <img src="./assets/whyChoose/Group.svg" alt="Icon" class="w-8 h-8" />
+              <div class="font-bold text-lg text-gray-900">
+                Fast Response Time
+              </div>
+            </div>
+            <div class="text-gray-500 font-semibold text-sm">
+              We understand that plumbing emergencies can't wait. Our team is
+              available 24/7 to ensure that your issues are resolved quickly,
+              minimizing damage and inconvenience.
+            </div>
+          </div>
+          <div class="flex flex-col gap-2 bg-gray-100 rounded-2xl p-4 shadow">
+            <div class="flex items-center gap-3">
+              <img src="./assets/whyChoose/Group.svg" alt="Icon" class="w-8 h-8" />
+              <div class="font-bold text-lg text-gray-900">
+                Fast Response Time
+              </div>
+            </div>
+            <div class="text-gray-500 font-semibold text-sm">
+              We understand that plumbing emergencies can't wait. Our team is
+              available 24/7 to ensure that your issues are resolved quickly,
+              minimizing damage and inconvenience.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Book your service in 3 easy steps -->
+    <section class=" max-w-7xl mx-auto px-4 md:px-8 lg:px-10 py-16 bg-white">
+      <div class=" flex flex-col gap-10">
+        <!-- Left: Simple Header -->
+        <div
+          class="flex flex-col items-center text-center max-w-md mx-auto gap-4"
+        >
+          <div
+            class="border bg-gray-100 border-gray-300 w-fit px-2 py-1 rounded-lg font-semibold text-gray-800"
+          >
+          <img class="inline" src="./assets/V0SmoVPU1tdoEEhuGxu24JRAj5k.svg.svg" alt="fire-icon">
+            Steps
+          </div>
+          <div class="flex flex-col gap-2">
+            <div
+              class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800"
+            >
+              Book your service in 3 easy steps
+            </div>
+            <div class="flex gap-3 text-gray-500 font-semibold">
+              Easy Steps to Get Started" section simplifies the process of
+              booking and receiving plumbing services.
+            </div>
+          </div>
+        </div>
+        <!-- Right: Scrollable Cards -->
+        <div class=" flex-col md:flex-row lg:flex gap-8 text-center overflow-x-auto">
+          <div class="flex flex-col gap-4 items-center">
+            <img src="./assets/Shap bg.svg" alt="Icon" class="" />
+            <div class="font-semibold text-lg text-gray-800">
+              1. Choose Plumbing Service
+            </div>
+            <div>
+              Browse our range of plumbing services tailored to address various
+              issues in your home or business. Select the service that fits your
+              needs.
+            </div>
+          </div>
+         <div class="flex flex-col gap-4 items-center">
+            <img src="./assets/Shap bg.svg" alt="Icon" class="" />
+            <div class="font-semibold text-lg text-gray-800">
+              2. Quickly Schedule Service
+            </div>
+            <div>
+              Use our online booking system or call our hotline to schedule an appointment at a convenient time that works best for you.
+            </div>
+          </div>
+         <div class="flex flex-col gap-4 items-center">
+            <img src="./assets/Shap bg.svg" alt="Icon" class="" />
+            <div class="font-semibold text-lg text-gray-800">
+             3. Job Completion Satisfaction
+            </div>
+            <div>
+              Our professional plumber will complete the job efficiently. Once satisfied, we will clean up the work area and ensure quality service.
+            </div>
+          </div>
+      </div>
+      </div>
+    </section>
+
+<!-- Trusted plumbing services -->
+
+    <section class=" max-w-7xl mx-auto px-4 md:px-8 lg:px-10 py-16 rounded-2xl ">
+      <div class="flex flex-col px-4 md:flex-row md:px-8 lg:px-10 gap-10 h-full py-10 rounded-2xl bg-blue-500/80 items-stretch"
+      >
+        <!-- Left -->
+        <div class="flex-1 flex flex-col  gap-6 text-white">
+          <div class="flex items-center gap-4">
+            <img src="./assets/Trusted Services Image.svg" alt="Trusted Services"  />
+            <div class="text-2xl md:text-3xl lg:text-4xl font-bold">Trusted plumbing services with care.</div>
+          </div>
+          <div class="text-base md:text-lg">
+            Our commitment to building trust and treating customers like family is what sets us apart. When you choose us, you're not just the plumber.
+          </div>
+          <div class="text-base md:text-lg">
+            We believe in delivering more than just expert plumbing services—we strive to provide a personalized experience for every customer. From the moment you contact us, our friendly team is dedicated to understanding your specific needs.
+          </div>
+        </div>
+        <!-- Right -->
+        <div class=" flex flex-col lg:flex-row items-center justify-center gap-2 ">
+          <div class=" flex items-center justify-center">
+            <img src="./assets/Gradient.png" alt="Gradient" class=" rounded-2xl transition-transform duration-300 hover:scale-105" />
+          </div>
+          <div class=" flex flex-col items-center justify-center gap-2">
+            <img src="./assets/trusted-plumber/Gradient (1).svg" alt=" Plumber 1" class="rounded-2xl transition-transform duration-300 hover:scale-105" />
+            <img src="./assets/trusted-plumber/Gradient (1).svg" alt=" Plumber 2" class="rounded-2xl transition-transform duration-300 hover:scale-105" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!--Testimonials-->
+    <section class="px-4 md:px-8 lg:px-10 py-16 bg-white">
+      <div class="max-w-7xl mx-auto flex flex-col gap-10">
+        <!-- Left -->
+        <div
+          class="flex flex-col items-center text-center max-w-md mx-auto gap-4"
+        >
+          <div
+            class="border bg-gray-100 border-gray-300 w-fit px-2 py-1 rounded-lg font-semibold text-gray-800"
+          >
+          <img class="inline" src="./assets/V0SmoVPU1tdoEEhuGxu24JRAj5k.svg.svg" alt="">
+           Our Testimonials
+          </div>
+          <div class="flex flex-col gap-2">
+            <div
+              class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800"
+            >
+              What  They Say About Our Service
+            </div>
+            <div class="flex gap-3 text-gray-500 font-semibold">
+             Trusted by homeowners and businesses, we take pride in delivering top-quality plumbing services with exceptional customer satisfaction.
+            </div>
+          </div>
+        </div>
+        <!-- Right -->
+        <div class="flex flex-col md:flex-row w-full gap-5 ">
+          <div class="flex flex-col gap-2 w-full border border-gray-200 rounded-2xl p-4 md:w-fit  ">
+           <div class="flex gap-4">
+            <div> <img src="./assets/testimonials/Testimonial Avatar.svg" alt="Icon" class="" /></div>
+            <div class="font-semibold text-lg text-gray-800">
+              <div>John Doe</div>
+              <div>March 5, 2023</div>
+            </div>
+           </div>
+           <div>
+          <img src="./assets/testimonials/Testimonial Rating Container.svg" alt="">
+           </div>
+            <div>
+             SwiftRooter responded quickly and fixed my burst pipe in no time! Highly recommend their service!
+            </div>
+          </div>
+         <div class="flex flex-col gap-2 border border-gray-200 rounded-2xl p-4 w-fit ">
+           <div class="flex gap-4">
+            <div> <img src="./assets/testimonials/Testimonial Avatar (1).svg" alt="Icon" class="" /></div>
+            <div class="font-semibold text-lg text-gray-800">
+              <div>Lisa T</div>
+              <div>February 20, 2024</div>
+            </div>
+           </div>
+           <div>
+            <img src="./assets/testimonials/Testimonial Rating Container.svg" alt="">
+           </div>
+            <div>
+             SwiftRooter responded quickly and fixed my burst pipe in no time! Highly recommend their service!
+            </div>
+          </div>
+        <div class="flex flex-col gap-2 border border-gray-200 rounded-2xl p-4 w-fit ">
+           <div class="flex gap-4">
+            <div> <img src="./assets/testimonials/Testimonial Avatar (2).svg" alt="Icon" class="" /></div>
+            <div class="font-semibold text-lg text-gray-800">
+              <div>Robert G</div>
+              <div>January 28, 2024</div>
+            </div>
+           </div>
+           <div>
+            <img src="./assets/testimonials/Testimonial Rating Container.svg" alt="">
+           </div>
+            <div>
+             SwiftRooter responded quickly and fixed my burst pipe in no time! Highly recommend their service!
+            </div>
+          </div>
+      </div>
+    </section>
+
+     <!-- location -->
+      <section class="px-4 md:px-8 lg:px-10 py-16 bg-white">
+      <div class="max-w-7xl mx-auto flex flex-col gap-10">
+        <!-- Left -->
+        <div
+          class="flex flex-col items-center text-center max-w-md mx-auto gap-4"
+        >
+          <div
+            class="border bg-gray-100 border-gray-300 w-fit px-2 py-1 rounded-lg font-semibold text-gray-800"
+          >
+          <img class="inline" src="../assets/V0SmoVPU1tdoEEhuGxu24JRAj5k.svg.svg" alt="">
+           Our Location
+          </div>
+          <div class="flex flex-col gap-2">
+            <div
+              class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800"
+            >
+              Where Does SwiftRooter Operate?
+            </div>
+            <div class="flex gap-3 text-gray-500 font-semibold">
+             We proudly serve multiple locations, ensuring prompt and reliable plumbing services near you.
+            </div>
+          </div>
+        </div>
+        <!-- Right -->
+        <div class=" flex flex-col md:flex-row items-center justify-center gap-5">
+          <div class="flex flex-col overflow-hidden items-center w-fit border border-gray-200 rounded-2xl ">
+            <div><img src="../assets/location/Image.svg" alt=""></div>
+            <div class="flex flex-col px-2 py-2 w-full bg-gray-100">
+              <div class="font-semibold text-lg lg:text-4xl">SwiftRooter Headquarters</div>
+              <div class="flex gap-2 items-center justify-between">
+                <div class=" text-sm lg:text-md text-gray-600">123 Main Street, Los Angeles, CA 90001</div>
+                <div class="bg-blue-500 rounded-full px-2 py-2 lg:size-10 text-center items-center"><img src="../assets/location/Icon (1).svg" alt=""></div>
+              </div>
+            </div>
+          </div>
+           <div class="flex flex-col overflow-hidden items-center w-fit border border-gray-200 rounded-2xl ">
+            <div><img src="../assets/location/Image.svg" alt=""></div>
+            <div class="flex flex-col px-2 py-2 w-full bg-gray-100">
+              <div class="font-semibold text-lg lg:text-4xl">SwiftRooter Office</div>
+              <div class="flex gap-2 items-center justify-between">
+                <div class=" text-sm lg:text-md text-gray-600">456 Ocean Drive, San Diego, CA 92101</div>
+                <div class="bg-blue-500 rounded-full px-2 py-2 lg:size-10 text-center items-center"><img src="../assets/location/Icon (1).svg" alt=""></div>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- Frequently Asked Questions-->
+      <!-- <section class="px-4 md:px-8 lg:px-10 py-16 bg-white">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+        
+        <div class="flex flex-col gap-4">
+          <div
+            class="border border-gray-300 w-fit px-2 py-1 rounded-lg font-semibold text-gray-800"
+          >
+          <img class="inline" src="./assets/V0SmoVPU1tdoEEhuGxu24JRAj5k.svg.svg" alt="">
+            Questions & Answers
+
+          </div>
+          <div
+              class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800"
+            >
+              Why Choose SwiftRooter?
+            </div>
+          <div class="flex flex-col gap-2">
+            <img src="./assets/Image Box.svg" alt="">
+          </div>
+        </div>
+      
+        <div class="flex flex-col gap-4">
+         
+          <div class="flex flex-col gap-4">
+           <div class="bg-gray-100 rounded-2xl shadow ">
+              <button type="button" class="w-full flex justify-between items-center px-4 py-3 focus:outline-none faq-toggle">
+               <span class="font-semibold text-gray-800 text-base md:text-xl">What services does SwiftRooter offer?</span>
+                 </button>
+                    <div class="faq-content px-4 pb-3 text-gray-600 text-sm md:text-base hidden">
+                    We offer a full range of plumbing services including emergency repairs, drain cleaning, pipe replacement, water heater installation.
+              </div>
+           </div>
+           <div class="bg-gray-100 rounded-2xl shadow ">
+              <button type="button" class="w-full flex justify-between items-center px-4 py-3 focus:outline-none faq-toggle">
+               <span class="font-semibold text-gray-800 text-base md:text-xl">What services does SwiftRooter offer?</span>
+                 </button>
+                    <div class="faq-content px-4 pb-3 text-gray-600 text-sm md:text-base hidden">
+                    We offer a full range of plumbing services including emergency repairs, drain cleaning, pipe replacement, water heater installation.
+              </div>
+           </div>
+           <div class="bg-gray-100 rounded-2xl shadow ">
+              <button type="button" class="w-full flex justify-between items-center px-4 py-3 focus:outline-none faq-toggle">
+               <span class="font-semibold text-gray-800 text-base md:text-xl">What services does SwiftRooter offer?</span>
+                 </button>
+                    <div class="faq-content px-4 pb-3 text-gray-600 text-sm md:text-base hidden">
+                    We offer a full range of plumbing services including emergency repairs, drain cleaning, pipe replacement, water heater installation.
+              </div>
+           </div>
+            <div class="bg-gray-100 rounded-2xl shadow ">
+              <button type="button" class="w-full flex justify-between items-center px-4 py-3 focus:outline-none faq-toggle">
+               <span class="font-semibold text-gray-800 text-base md:text-xl">What services does SwiftRooter offer?</span>
+                 </button>
+                    <div class="faq-content px-4 pb-3 text-gray-600 text-sm md:text-base hidden">
+                    We offer a full range of plumbing services including emergency repairs, drain cleaning, pipe replacement, water heater installation.
+              </div>
+           </div>
+            <div class="bg-gray-100 rounded-2xl shadow ">
+              <button type="button" class="w-full flex justify-between items-center px-4 py-3 focus:outline-none faq-toggle">
+               <span class="font-semibold text-gray-800 text-base md:text-xl">What services does SwiftRooter offer?</span>
+                 </button>
+                    <div class="faq-content px-4 pb-3 text-gray-600 text-sm md:text-base hidden">
+                    We offer a full range of plumbing services including emergency repairs, drain cleaning, pipe replacement, water heater installation.
+              </div>
+           </div>
+            <div class="bg-gray-100 rounded-2xl shadow ">
+              <button type="button" class="w-full flex justify-between items-center px-4 py-3 focus:outline-none faq-toggle">
+               <span class="font-semibold text-gray-800 text-base md:text-xl">What services does SwiftRooter offer?</span>
+                 </button>
+                    <div class="faq-content px-4 pb-3 text-gray-600 text-sm md:text-base hidden">
+                    We offer a full range of plumbing services including emergency repairs, drain cleaning, pipe replacement, water heater installation.
+              </div>
+           </div>
+           
+            
+            
+          </div>
+          <div class="bg-black text-center py-8 flex flex-col gap-5 px-3 rounded-2xl">
+            <div class="text-white text-2xl md:text-4xl font-bold">Need More Help?</div>
+            <div class="text-white text-lg"> Contact us for support, inquiries, or partnerships—we’re happy to assist!</div>
+            <div><button class="bg-blue-400 w-full sm:w-50 text-white px-2 md:px-5 py-3 rounded-3xl text-lg">Contact Us</button></div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+   <!-- footer -->
+  <footer class=" space-y-5 bg-gray-200  px-4 md:px-8 lg:px-10 lg:py-16 ">
+        <div class=" max-w-7xl mx-auto flex flex-col md:flex-row gap-5 justify-between">
+          <div class="flex flex-col gap-5 justify-between">
+        <div class="flex flex-col gap-3">
+        <div class="lg:pl-2">
+            <span class="text-red-600 text-xl md:text-2xl font-extrabold"
+              >Swift</span
+            ><span class="text-blue-600 text-xl md:text-2xl font-extrabold"
+              >Rooter</span
+            >
+          </div>
+          <div class=" text-md lg:text-lg text-gray-500">Fast, reliable & professional 24/7 plumbing & rooter services.</div>
+       </div>
+
+       <div class="flex flex-col  gap-2 lg:gap-5">
+        <div class="text-3xl lg:text-5xl font-bold">Get in Touch!</div>
+        <div class=" text-md lg:text-lg text-gray-500">Have questions or need assistance? We’re here to help!</div>
+        <div class="flex flex-col md:flex-row gap-3">
+          <input class=" border border-gray-400 rounded-lg px-2 w-full py-2 focus:outline-none focus:ring-2 focus:ring-blue-400" type="email" name="email" id="email" placeholder="Enter your email">
+          <button class="bg-blue-400 w-full lg:w-30 text-white  md:px-2 py-2 rounded-lg text-lg">SubScribe</button> 
+         </div>
+       </div>
+
+       
+        </div>
+       <!-- right-side -->
+        <div class="flex flex-col gap-10">
+          <div class="grid grid-cols-2 lg:grid-cols-3 gap-5  justify-between w-full ">
+          <!-- Explore -->
+          <div>
+            <div class="font-semibold text-xl  text-gray-800 mb-2">Explore</div>
+            <ul class="flex flex-col gap-2 text-gray-600 text-sm">
+              <li><a href="#services" class="hover:text-blue-600 text-lg font-semibold transition">Home</a></li>
+              <li><a href="#about" class="hover:text-blue-600 text-lg font-semibold transition">Location</a></li>
+              <li><a href="#pricing" class="hover:text-blue-600 text-lg font-semibold transition">Services</a></li>
+              <li><a href="#faq" class="hover:text-blue-600 text-lg font-semibold transition">FAQ</a></li>
+            </ul>
+          </div>
+          <!-- Company -->
+        <div>
+            <div class="font-semibold text-xl  text-gray-800 mb-2">company</div>
+            <ul class="flex flex-col gap-2">
+              <li><a href="#services" class="text-lg font-semibold transition text-gray-500 cursor-pointer hover:text-blue-400">About Us</a></li>
+              <li><a href="./pages/contact.html" class="text-lg font-semibold transition text-gray-500 cursor-pointer hover:text-blue-400">Contact Us</a></li>
+              <li><a href="#pricing" class="text-lg font-semibold transition text-gray-500 cursor-pointer hover:text-blue-400">Privacy Policy</a></li>
+           
+            </ul>
+          </div>
+          <!-- Get in Touch -->
+          <div>
+            <div class="font-semibold text-xl  text-gray-800 mb-2">Help</div>
+            <ul class="flex flex-col gap-2 ">
+              <li><a href="#services" class=" text-lg font-semibold transition text-gray-500 cursor-pointer hover:text-blue-400">FAQ</a></li>
+              <li><a href="#about" class=" text-lg font-semibold transition text-gray-500 cursor-pointer hover:text-blue-400">Help Center</a></li>
+              <li><a href="#pricing" class=" text-lg font-semibold transition text-gray-500 cursor-pointer hover:text-blue-400">Support</a></li>
+              
+            </ul>
+          </div>
+        </div>
+        <div class="flex flex-col md:flex-row gap-5 justify-between w-full ">
+         
+          <div>
+            <div class="font-semibold text-xl  text-gray-800 mb-2">Address</div>
+            <div class="text-lg font-semibold text-gray-500 cursor-pointer hover:text-blue-400  ">1901 Thornridge Cir. Shiloh, Hawaii 81063</div>
+          </div>
+         
+          <div>
+            <div class="font-semibold text-xl  text-gray-800 mb-2">Phone</div>
+            <div class="text-lg font-semibold text-gray-500 cursor-pointer hover:text-blue-400  ">+1 [303] 873-2983</div>
+          </div>
+          
+        
+        </div>
+
+        <div class="flex flex-col md:flex-row gap-5  justify-between w-full ">
+         
+          <div>
+            <div class="font-semibold text-xl  text-gray-800 mb-2">Address</div>
+            <div class="text-lg font-semibold text-gray-500 cursor-pointer hover:text-blue-400  ">1901 Thornridge Cir. Shiloh, Hawaii 81063</div>
+          </div>
+         
+          <div>
+            <div class="font-semibold text-xl  text-gray-800 mb-2">Phone</div>
+            <div class="text-lg font-semibold text-gray-500 cursor-pointer hover:text-blue-400 ">+1 [303] 873-2983</div>
+          </div>
+          
+        
+        </div>
+        </div>
+        </div>
+
+        <div class="text-center "> 
+          <hr width="100%" class="border-gray-300">
+          <div class="text-md font-semibold pt-5"><span class="text-gray-500">Designed by </span> Farmer Geeks , a Part of Saeculum Solutions</div>
+        </div>
+       
+      </footer>
+  </body>
+</html>
+
+
+
+
+
+
+    <!-- <section class=" max-w-6xl mx-auto px-4 md:px-8 lg:px-10 flex flex-col gap-20 py-16 min-h-screen">
+      <div class="flex flex-col gap-4 text-center items-center">
+        <div
+            class="border bg-gray-100 border-gray-100 w-fit px-3 py-1 rounded-lg font-semibold text-gray-600"
+          >
+          <img class="inline" src="./assets/V0SmoVPU1tdoEEhuGxu24JRAj5k.svg.svg" alt="">
+          contact Us
+
+          </div>
+          <div
+              class="text-2xl md:text-3xl lg:text-5xl font-bold text-gray-800"
+            >
+              Contact Us
+            </div>
+      </div>
+      <div class=" grid grid-cols-1 md:grid-cols-2 gap-10">
+      
+        <div class="space-y-8">
+          <div>
+            <h2
+              class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-2"
+            >
+              Get in Touch With Us
+            </h2>
+            <p class="text-gray-800 lg:text-lg">
+              We’re here to help! Choose your preferred way to reach out or send
+              us a message directly.
+            </p>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div
+              class="border border-gray-100 text-black rounded-2xl px-3 py-3 font-semibold flex justify-between items-center gap-2 transition"
+            >
+              <div class="flex items-center gap-5">
+                <img
+                  class="bg-gray-100 rounded-lg px-2 py-3 lg:px-3 lg:py-3"
+                  src="./assets/contact/Email Icon.svg"
+                  alt=""
+                />
+                <div class="text-sm lg:text-lg">hello@swiftrooter.com</div>
+              </div>
+              <div class="text-sm lg:text-lg">
+                <div class="text-sm lg:text-lg">
+                  <button
+                    class="bg-gray-100 px-1 py-2 lg:px-3 border cursor-pointer border-gray-200 lg:py-2 rounded-lg text-blue-600"
+                  >
+                    Message
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="border border-gray-100 text-black rounded-lg px-3 py-3 font-semibold flex justify-between items-center gap-2 transition"
+            >
+              <div class="flex items-center gap-5">
+                <img
+                  class="bg-gray-100 rounded-lg px-2 py-3 lg:px-3 lg:py-3"
+                  src="./assets/contact/Layer 3.svg"
+                  alt=""
+                />
+                <div class="text-sm lg:text-lg">+1 [303] 873-2983</div>
+              </div>
+              <div class="text-sm lg:text-lg">
+                <button
+                  class="bg-gray-100 px-1 py-2 lg:px-3 border cursor-pointer border-gray-200 lg:py-2 rounded-lg text-blue-600"
+                >
+                  Call Now
+                </button>
+              </div>
+            </div>
+            <div
+              class="border border-gray-100 text-black rounded-lg px-3 py-3 font-semibold flex justify-between items-center gap-2 transition"
+            >
+              <div class="flex items-center gap-5">
+                <img
+                  class="bg-gray-100 rounded-lg px-2 py-3 lg:px-3 lg:py-3"
+                  src="./assets/contact/svg189 (1).svg"
+                  alt=""
+                />
+                <div class="text-sm lg:text-lg">Online Appointment</div>
+              </div>
+              <div class="text-sm lg:text-lg">
+                <button
+                  class="bg-gray-100 px-1 py-2 lg:px-3 border cursor-pointer border-gray-200 lg:py-2 rounded-lg text-blue-600"
+                >
+                  Schedule
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="rounded-2xl flex flex-col gap-4">
+          <div>
+            <h2 class="text-xl lg:text-xl font-semibold text-gray-800">
+              Send Us a Message
+            </h2>
+            <p class="text-gray-600 lg:text-lg">
+              Use our convenient contact form to reach out with questions,
+              feedback, or collaboration inquiries.
+            </p>
+          </div>
+          <form class="grid grid-cols-1 gap-3">
+            <div>
+              <input
+                type="text"
+                
+                name="contact-name"
+                class="w-full border bg-gray-100 border-gray-100 rounded-2xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                placeholder="Your Name"
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                
+                name="contact-email"
+                class="w-full border bg-gray-100 border-gray-100 rounded-2xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-40"
+                placeholder="Your Email"
+              />
+            </div>
+            <div>
+              <textarea
+                
+                name="contact-message"
+                rows="5"
+                class="w-full border bg-gray-100 border-gray-100 rounded-2xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-40"
+                placeholder="Type your message..."
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-black rounded-lg text-white font-semibold px-6 py-2 cursor-pointer transition"
+            >
+            <img class="inline" src="./assets/Icon.svg" alt="">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section> -->
